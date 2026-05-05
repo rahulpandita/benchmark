@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-classify_issues.py — Phase 1: Broad candidate downloader for tldraw/tldraw issues.
+classify_issues.py — Phase 1: Broad candidate downloader for GitHub issues.
 
 This is a two-phase approach to building a benchmark dataset of closed issues:
 
   Phase 1 (this script):
-    Download closed issues from tldraw/tldraw using the GitHub search API and
-    bucket them loosely into three categories based on closure reason and
-    contributor status.  Rich metadata is saved for each candidate so that
-    Phase 2 can be done offline.
+    Download closed issues from a GitHub repository using the GitHub search
+    API and bucket them loosely into three categories based on closure reason
+    and contributor status.  Rich metadata is saved for each candidate so
+    that Phase 2 can be done offline.
 
   Phase 2 (manual review):
     A human reviewer goes through each candidate holistically and assigns a
@@ -29,7 +29,7 @@ Definitions:
   - Regular contributor: >3 prior issues+PRs at time of filing.
 
 Usage:
-  python3 classify_issues.py [--target 20] [--output candidates.json]
+  python3 classify_issues.py --repo owner/repo [--target 20] [--output FILE]
 
 Requires:
   - ``gh`` CLI authenticated with GitHub
@@ -44,10 +44,8 @@ import time
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
-REPO = "tldraw/tldraw"
-
 # ---------------------------------------------------------------------------
-# Contributor count cache — keyed by "username:YYYY-MM-DD"
+# Contributor count cache — keyed by "repo:username:YYYY-MM-DD"
 # ---------------------------------------------------------------------------
 _contributor_cache: Dict[str, int] = {}
 
@@ -85,10 +83,11 @@ def gh_api(endpoint: str) -> Any:
 # Issue fetching via search API
 # ---------------------------------------------------------------------------
 
-def search_issues(reason: str, max_pages: int = 5, per_page: int = 100) -> List[dict]:
+def search_issues(repo: str, reason: str, max_pages: int = 5, per_page: int = 100) -> List[dict]:
     """Fetch closed issues for a given ``reason`` using the search API.
 
     Args:
+        repo: GitHub repository in ``owner/repo`` format.
         reason: ``"not_planned"`` or ``"completed"``.
         max_pages: Maximum number of pages to fetch.
         per_page: Results per page (max 100 for search API).
@@ -98,7 +97,7 @@ def search_issues(reason: str, max_pages: int = 5, per_page: int = 100) -> List[
     """
     all_issues: List[dict] = []
     for page in range(1, max_pages + 1):
-        q = f"repo:{REPO}+is:issue+is:closed+reason:{reason}"
+        q = f"repo:{repo}+is:issue+is:closed+reason:{reason}"
         endpoint = (
             f"/search/issues?q={q}"
             f"&sort=created&order=desc&per_page={per_page}&page={page}"
@@ -124,19 +123,19 @@ def search_issues(reason: str, max_pages: int = 5, per_page: int = 100) -> List[
 # Contributor classification
 # ---------------------------------------------------------------------------
 
-def get_contributor_count(username: str, before_date: str) -> int:
+def get_contributor_count(repo: str, username: str, before_date: str) -> int:
     """Return the number of prior issues+PRs by *username* in the repo.
 
     The count is date-filtered (``created<=YYYY-MM-DD``) and then reduced by
     1 to exclude the issue itself (which is included in the search results).
     """
     date_str = before_date[:10]  # YYYY-MM-DD
-    cache_key = f"{username}:{date_str}"
+    cache_key = f"{repo}:{username}:{date_str}"
     if cache_key in _contributor_cache:
         return _contributor_cache[cache_key]
 
     endpoint = (
-        f"/search/issues?q=repo:{REPO}+author:{username}"
+        f"/search/issues?q=repo:{repo}+author:{username}"
         f"+created:<={date_str}&per_page=1"
     )
     data = gh_api(endpoint)
@@ -147,9 +146,9 @@ def get_contributor_count(username: str, before_date: str) -> int:
     return count
 
 
-def is_new_contributor(username: str, before_date: str, threshold: int = 3) -> bool:
+def is_new_contributor(repo: str, username: str, before_date: str, threshold: int = 3) -> bool:
     """A new contributor has ≤ *threshold* prior contributions at filing time."""
-    return get_contributor_count(username, before_date) <= threshold
+    return get_contributor_count(repo, username, before_date) <= threshold
 
 
 # ---------------------------------------------------------------------------
@@ -191,6 +190,7 @@ def format_issue(issue: dict, contrib_count: int, is_new: bool) -> dict:
 # ---------------------------------------------------------------------------
 
 def fill_bucket(
+    repo: str,
     issues: List[dict],
     bucket_name: str,
     want_new: bool,
@@ -199,6 +199,7 @@ def fill_bucket(
     """Classify contributors and collect up to *target* candidates.
 
     Args:
+        repo: GitHub repository in ``owner/repo`` format.
         issues: Raw issue dicts from the search API.
         bucket_name: Human-readable name (for progress messages).
         want_new: ``True`` to keep new contributors, ``False`` for regulars.
@@ -217,7 +218,7 @@ def fill_bucket(
             continue
 
         created_at = issue["created_at"]
-        count = get_contributor_count(author, created_at)
+        count = get_contributor_count(repo, author, created_at)
         new = count <= 3
 
         if new != want_new:
@@ -243,31 +244,40 @@ def main() -> None:
         "for later manual review.",
     )
     parser.add_argument(
+        "--repo", type=str, required=True,
+        help="GitHub repository in owner/repo format (e.g. tldraw/tldraw)",
+    )
+    parser.add_argument(
         "--target", type=int, default=20,
         help="Number of candidates to collect per bucket (default: 20)",
     )
     parser.add_argument(
-        "--output", type=str, default="candidates.json",
-        help="Output JSON file path (default: candidates.json)",
+        "--output", type=str, default=None,
+        help="Output JSON file path (default: candidates_<owner>_<repo>.json)",
     )
     args = parser.parse_args()
 
+    if args.output is None:
+        safe_name = args.repo.replace("/", "_")
+        args.output = f"candidates_{safe_name}.json"
+
+    repo = args.repo
     target = args.target
-    print(f"=== Phase 1: Downloading candidate issues from {REPO} ===")
+    print(f"=== Phase 1: Downloading candidate issues from {repo} ===")
     print(f"    Target: {target} candidates per bucket\n")
 
     # ------------------------------------------------------------------
     # Step 1 — Fetch not_planned issues
     # ------------------------------------------------------------------
     print("[1/4] Fetching not_planned issues via search API ...")
-    not_planned_issues = search_issues("not_planned")
+    not_planned_issues = search_issues(repo, "not_planned")
     print(f"  → {len(not_planned_issues)} not_planned issues fetched\n")
 
     # ------------------------------------------------------------------
     # Step 2 — Fetch completed issues
     # ------------------------------------------------------------------
     print("[2/4] Fetching completed issues via search API ...")
-    completed_issues = search_issues("completed")
+    completed_issues = search_issues(repo, "completed")
     print(f"  → {len(completed_issues)} completed issues fetched\n")
 
     # ------------------------------------------------------------------
@@ -276,15 +286,15 @@ def main() -> None:
     print("[3/4] Classifying contributors and filling buckets ...\n")
 
     print(f"  Bucket A — not_planned + new contributor (target: {target})")
-    bucket_a = fill_bucket(not_planned_issues, "A", want_new=True, target=target)
+    bucket_a = fill_bucket(repo, not_planned_issues, "A", want_new=True, target=target)
     print(f"  → Bucket A: {len(bucket_a)} candidates\n")
 
     print(f"  Bucket B — completed + new contributor (target: {target})")
-    bucket_b = fill_bucket(completed_issues, "B", want_new=True, target=target)
+    bucket_b = fill_bucket(repo, completed_issues, "B", want_new=True, target=target)
     print(f"  → Bucket B: {len(bucket_b)} candidates\n")
 
     print(f"  Bucket C — not_planned + regular contributor (target: {target})")
-    bucket_c = fill_bucket(not_planned_issues, "C", want_new=False, target=target)
+    bucket_c = fill_bucket(repo, not_planned_issues, "C", want_new=False, target=target)
     print(f"  → Bucket C: {len(bucket_c)} candidates\n")
 
     # ------------------------------------------------------------------
@@ -294,7 +304,7 @@ def main() -> None:
 
     output = {
         "metadata": {
-            "repository": REPO,
+            "repository": repo,
             "fetched_at": datetime.now(timezone.utc).isoformat(),
             "target_per_bucket": target,
             "not_planned_issues_fetched": len(not_planned_issues),

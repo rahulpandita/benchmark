@@ -83,7 +83,13 @@ def gh_api(endpoint: str) -> Any:
 # Issue fetching via search API
 # ---------------------------------------------------------------------------
 
-def search_issues(repo: str, reason: str, max_pages: int = 5, per_page: int = 100) -> List[dict]:
+def search_issues(
+    repo: str,
+    reason: str,
+    max_pages: int = 5,
+    per_page: int = 100,
+    exclude_labels: Optional[List[str]] = None,
+) -> List[dict]:
     """Fetch closed issues for a given ``reason`` using the search API.
 
     Args:
@@ -91,6 +97,7 @@ def search_issues(repo: str, reason: str, max_pages: int = 5, per_page: int = 10
         reason: ``"not_planned"`` or ``"completed"``.
         max_pages: Maximum number of pages to fetch.
         per_page: Results per page (max 100 for search API).
+        exclude_labels: Labels to exclude from search results.
 
     Returns:
         A list of issue dicts (PRs are filtered out).
@@ -98,6 +105,8 @@ def search_issues(repo: str, reason: str, max_pages: int = 5, per_page: int = 10
     all_issues: List[dict] = []
     for page in range(1, max_pages + 1):
         q = f"repo:{repo}+is:issue+is:closed+reason:{reason}"
+        for label in (exclude_labels or []):
+            q += f"+-label:{label}"
         endpoint = (
             f"/search/issues?q={q}"
             f"&sort=created&order=desc&per_page={per_page}&page={page}"
@@ -252,6 +261,14 @@ def main() -> None:
         help="Number of candidates to collect per bucket (default: 20)",
     )
     parser.add_argument(
+        "--pages", type=int, default=5,
+        help="Number of search result pages to fetch per bucket (default: 5, max 10)",
+    )
+    parser.add_argument(
+        "--exclude-labels", type=str, default=None,
+        help="Comma-separated labels to exclude (e.g. 'automation,bot,automated-analysis')",
+    )
+    parser.add_argument(
         "--output", type=str, default=None,
         help="Output JSON file path (default: candidates_<owner>_<repo>.json)",
     )
@@ -263,21 +280,25 @@ def main() -> None:
 
     repo = args.repo
     target = args.target
+    exclude_labels = [l.strip() for l in args.exclude_labels.split(",")] if args.exclude_labels else None
     print(f"=== Phase 1: Downloading candidate issues from {repo} ===")
-    print(f"    Target: {target} candidates per bucket\n")
+    print(f"    Target: {target} candidates per bucket")
+    if exclude_labels:
+        print(f"    Excluding labels: {exclude_labels}")
+    print()
 
     # ------------------------------------------------------------------
     # Step 1 — Fetch not_planned issues
     # ------------------------------------------------------------------
     print("[1/4] Fetching not_planned issues via search API ...")
-    not_planned_issues = search_issues(repo, "not_planned")
+    not_planned_issues = search_issues(repo, "not_planned", max_pages=args.pages, exclude_labels=exclude_labels)
     print(f"  → {len(not_planned_issues)} not_planned issues fetched\n")
 
     # ------------------------------------------------------------------
     # Step 2 — Fetch completed issues
     # ------------------------------------------------------------------
     print("[2/4] Fetching completed issues via search API ...")
-    completed_issues = search_issues(repo, "completed")
+    completed_issues = search_issues(repo, "completed", max_pages=args.pages, exclude_labels=exclude_labels)
     print(f"  → {len(completed_issues)} completed issues fetched\n")
 
     # ------------------------------------------------------------------

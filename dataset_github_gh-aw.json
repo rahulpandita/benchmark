@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "repository": "github/gh-aw",
+    "description": "Final benchmark dataset: 5 issues per category, holistically reviewed",
+    "categories": {
+      "cat1_new_slop": "New contributor (\u22643 prior contribs at filing) + slop",
+      "cat2_new_not_planned": "New contributor + legitimate issue closed as not-planned",
+      "cat3_new_worked_upon": "New contributor + issue actually worked upon by maintainers",
+      "cat4_regular_slop": "Regular contributor (>3 prior contribs) + slop"
+    }
+  },
+  "cat1_new_slop": [
+    {
+      "issue_number": 28317,
+      "title": "Test issue",
+      "author": "gh-aw-bot",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.01,
+      "url": "https://github.com/github/gh-aw/issues/28317",
+      "review_notes": "Test issue with empty body; only comment 'Done testing'"
+    },
+    {
+      "issue_number": 24504,
+      "title": "testing kit for repository",
+      "author": "anny999-ops",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.12,
+      "url": "https://github.com/github/gh-aw/issues/24504",
+      "review_notes": "Off-topic/wrong repo - unrelated testing/health-check system"
+    },
+    {
+      "issue_number": 20263,
+      "title": "repository view only access no permissions granted",
+      "author": "villarrealcecilia2024-png",
+      "author_prior_contribs": 0,
+      "comments": 0,
+      "days_open": 0.05,
+      "url": "https://github.com/github/gh-aw/issues/20263",
+      "review_notes": "AI-generated/minimal documentation suggestion without clear problem"
+    },
+    {
+      "issue_number": 19224,
+      "title": "\u2728 Set up Copilot instructions",
+      "author": "hariatisalikon283-star",
+      "author_prior_contribs": 0,
+      "comments": 0,
+      "days_open": 0.01,
+      "url": "https://github.com/github/gh-aw/issues/19224",
+      "review_notes": "Extremely minimal spam-like issue with only an image"
+    },
+    {
+      "issue_number": 18636,
+      "title": "Azure MCP tool calls fail with 'invalid character \\'S\\'' via MCP gateway",
+      "author": "dulalbert",
+      "author_prior_contribs": 0,
+      "comments": 2,
+      "days_open": 0.28,
+      "url": "https://github.com/github/gh-aw/issues/18636",
+      "review_notes": "Nearly empty issue with just title 'Issue Monster fails'"
+    }
+  ],
+  "cat2_new_not_planned": [
+    {
+      "issue_number": 28389,
+      "title": "create_pull_request returns patch file instead of creating PR when multiple PRs exist",
+      "author": "askpaisa",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.35,
+      "url": "https://github.com/github/gh-aw/issues/28389",
+      "review_notes": "Legitimate bug report for create_pull_request action failing"
+    },
+    {
+      "issue_number": 27556,
+      "title": "[aw-failures] Workflow timing out at 40min \u2014 MCP get_file_contents 37\u201371s per call, LLM turns 4\u201310min",
+      "author": "viktoriyabogdanova",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.61,
+      "url": "https://github.com/github/gh-aw/issues/27556",
+      "review_notes": "Real performance issue with detailed metrics and timeline"
+    },
+    {
+      "issue_number": 27272,
+      "title": "Windows: gh-aw self-upgrade fails and leaves extension unrecoverable (manifest wiped)",
+      "author": "ericsciple",
+      "author_prior_contribs": 1,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/github/gh-aw/issues/27272",
+      "review_notes": "Comprehensive bug report on Windows auto-upgrade failure"
+    },
+    {
+      "issue_number": 26175,
+      "title": "Question: Why do some GitHub Actions steps intermittently have no logs (data-log-url) after completion?",
+      "author": "Ray961123",
+      "author_prior_contribs": 0,
+      "comments": 5,
+      "days_open": 5.35,
+      "url": "https://github.com/github/gh-aw/issues/26175",
+      "review_notes": "Valid support question about Actions step logs behavior"
+    },
+    {
+      "issue_number": 23268,
+      "title": "Add agentic workflow: Proactive Dependency Auto-Remediation for Dependabot PRs",
+      "author": "Henry-Shan",
+      "author_prior_contribs": 0,
+      "comments": 2,
+      "days_open": 0.69,
+      "url": "https://github.com/github/gh-aw/issues/23268",
+      "review_notes": "Legitimate feature request for Dependabot auto-remediation workflow"
+    }
+  ],
+  "cat3_new_worked_upon": [
+    {
+      "issue_number": 30336,
+      "title": "Activation comment / reaction not posted for `pull_request_review` triggers \u2014 `buildReactionLikeCondition` allowlist is incomplete",
+      "author": "mason-tim",
+      "author_prior_contribs": 3,
+      "comments": 0,
+      "days_open": 0.14,
+      "url": "https://github.com/github/gh-aw/issues/30336",
+      "review_notes": "Legitimate bug: pull_request_review triggers don't post activation comments"
+    },
+    {
+      "issue_number": 30178,
+      "title": "gh aw upgrade: still warns 'Remove unsafe secrets from engine.env' despite fix in #29378 for compile",
+      "author": "MauroDruwel",
+      "author_prior_contribs": 3,
+      "comments": 0,
+      "days_open": 0.16,
+      "url": "https://github.com/github/gh-aw/issues/30178",
+      "review_notes": "Bug report about gh aw upgrade warning"
+    },
+    {
+      "issue_number": 29499,
+      "title": "`Upload activation artifact` step missing `include-hidden-files: true` \u2014 silently drops `.claude`/`.github` from activation snapshot",
+      "author": "bartul",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.03,
+      "url": "https://github.com/github/gh-aw/issues/29499",
+      "review_notes": "Bug: artifact upload missing include-hidden-files flag; quick fix confirmed"
+    },
+    {
+      "issue_number": 29378,
+      "title": "docs: COPILOT_PROVIDER_* variables not documented and strict-mode allowlist not updated",
+      "author": "MauroDruwel",
+      "author_prior_contribs": 1,
+      "comments": 7,
+      "days_open": 0.23,
+      "url": "https://github.com/github/gh-aw/issues/29378",
+      "review_notes": "Documentation issue; coordinated with AWF team"
+    },
+    {
+      "issue_number": 29301,
+      "title": "`repo-memory` push fails with \"Commits must have verified signatures\" \u2014 `push_repo_memory.cjs` should use `pushSignedCommits`",
+      "author": "mason-tim",
+      "author_prior_contribs": 2,
+      "comments": 0,
+      "days_open": 0.14,
+      "url": "https://github.com/github/gh-aw/issues/29301",
+      "review_notes": "Legitimate bug: repo-memory push fails with signature verification"
+    }
+  ],
+  "cat4_regular_slop": [
+    {
+      "issue_number": 23960,
+      "title": "test: comprehensive testing improvements for audit commands",
+      "author": "Mossaka",
+      "author_prior_contribs": 178,
+      "comments": 0,
+      "days_open": 1.31,
+      "url": "https://github.com/github/gh-aw/issues/23960",
+      "review_notes": "AI-generated comprehensive testing improvement epic; no engagement, formulaic"
+    },
+    {
+      "issue_number": 23184,
+      "title": "feat: surface audit data extraction errors in non-verbose mode",
+      "author": "Mossaka",
+      "author_prior_contribs": 168,
+      "comments": 0,
+      "days_open": 10.7,
+      "url": "https://github.com/github/gh-aw/issues/23184",
+      "review_notes": "AI-generated minor code improvement suggestion; no engagement"
+    },
+    {
+      "issue_number": 22010,
+      "title": "Security Alert Burndown",
+      "author": "mnkiefer",
+      "author_prior_contribs": 264,
+      "comments": 0,
+      "days_open": 0.1,
+      "url": "https://github.com/github/gh-aw/issues/22010",
+      "review_notes": "AI-generated security alert burndown campaign epic; no engagement, template-like"
+    },
+    {
+      "issue_number": 10660,
+      "title": "test issue",
+      "author": "mnkiefer",
+      "author_prior_contribs": 999,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/github/gh-aw/issues/10660",
+      "review_notes": "Empty test issue with no body; only comment is test-related"
+    },
+    {
+      "issue_number": 10160,
+      "title": "Build testing and validation framework for SDK workflows",
+      "author": "Mossaka",
+      "author_prior_contribs": 999,
+      "comments": 0,
+      "days_open": 0.0,
+      "url": "https://github.com/github/gh-aw/issues/10160",
+      "review_notes": "AI-generated testing framework template; 0 comments, formulaic"
+    }
+  ]
+}

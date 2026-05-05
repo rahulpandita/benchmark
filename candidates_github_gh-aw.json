@@ -1,0 +1,1054 @@
+{
+  "metadata": {
+    "repository": "github/gh-aw",
+    "fetched_at": "2026-05-05T15:07:09.990196+00:00",
+    "target_per_bucket": 20,
+    "not_planned_issues_fetched": 1000,
+    "completed_issues_fetched": 1000,
+    "contributor_threshold": 3,
+    "description": "Phase 1 broad candidate download. Bucket A and C come from not_planned issues; Bucket B from completed issues. Contributor status is determined by prior issues+PRs at time of filing (<=3 = new, >3 = regular). The issue itself is excluded from the count."
+  },
+  "bucket_A_not_planned_new_contributor": [
+    {
+      "number": 28389,
+      "title": "create_pull_request returns patch file instead of creating PR when multiple PRs exist",
+      "body_preview": "**Description**\nThe create_pull_request action is not creating a pull request as expected.\nInstead, it returns a patch file in the response.\n\nThis issue appears consistently when the repository already has more than one open pull request.\n\n**Expected Behavior**\n\nA new pull request should be created in the repository\nThe response should include PR details (URL, number, etc.)\n\n**Actual Behavior**\n\nNo pull request is created\nThe action returns a patch file instead\n\n**Steps to Reproduce**\n\nUse a rep",
+      "url": "https://github.com/github/gh-aw/issues/28389",
+      "author": "askpaisa",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-25T03:25:50Z",
+      "closed_at": "2026-04-25T11:51:22Z",
+      "days_open": 0.35,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27556,
+      "title": "[aw-failures] Workflow timing out at 40min \u2014 MCP get_file_contents 37\u201371s per call, LLM turns 4\u201310min",
+      "body_preview": "Hi,\nWe are seeing consistent 40-minute timeouts on our scaffold workflow starting today (Apr 21). Two of our runs hit the hard timeout before the agent could commit/push the scaffold branch. This was working reliably in ~15 minutes last week.\n\nAffected runs (today):\n\n```\n09:26:47  \u25cf Read module standard\n09:29:11  \u25cf Create feature branch              (2m 24s gap)\n09:31:50  \u25cf List AVM module files              (2m 39s gap)\n09:34:00  \u25cf Check existing renovate            (2m 10s gap)\n09:35:36  \u25cf Cre",
+      "url": "https://github.com/github/gh-aw/issues/27556",
+      "author": "viktoriyabogdanova",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-04-21T11:58:54Z",
+      "closed_at": "2026-04-22T02:30:45Z",
+      "days_open": 0.61,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27272,
+      "title": "Windows: gh-aw self-upgrade fails and leaves extension unrecoverable (manifest wiped)",
+      "body_preview": "## Summary\n\nOn Windows, the auto-upgrade triggered from inside `gh aw` (e.g. `gh aw upgrade`) fails with `Access is denied` on `gh-aw.exe`, and \u2014 worse \u2014 leaves the extension in a half-wiped state where every subsequent `gh extension upgrade gh-aw` fails with `unable to retrieve latest version for extension \"aw\"`. The only recovery is `gh extension remove gh-aw && gh extension install github/gh-aw`.\n\nReported by @shanselman in Slack. Observed on `gh` 2.90.0, `gh-aw` v0.68.1 upgrading to v0.68.3.",
+      "url": "https://github.com/github/gh-aw/issues/27272",
+      "author": "ericsciple",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-20T04:52:06Z",
+      "closed_at": "2026-04-20T04:54:24Z",
+      "days_open": 0.0,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 26175,
+      "title": "Question: Why do some GitHub Actions steps intermittently have no logs (data-log-url) after completion?",
+      "body_preview": "Hi,\n\nWe are seeing an intermittent issue in GitHub Actions:\n\nDuring execution, logs stream normally\nAfter completion, some steps cannot be expanded and have no data-log-url\nThis happens inconsistently (same workflow, same code, different outcomes)\n\n<img width=\"327\" height=\"113\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ccd64c49-a287-4f7d-9e7f-7a9050e40061\" />\n\nSo our question is:\n\nUnder what conditions does GitHub Actions persist step logs and generate a data-log-url?\nWhat coul",
+      "url": "https://github.com/github/gh-aw/issues/26175",
+      "author": "Ray961123",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-14T09:35:21Z",
+      "closed_at": "2026-04-19T18:05:58Z",
+      "days_open": 5.35,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 24504,
+      "title": "testing kit for repository",
+      "body_preview": "\n> Testing & Health  @cabird Duplicate of #24501 ****\n\nProject Health-Check: You can verify if a project is correctly configured for Serena by running the command serena project health-check via [uv](https://github.com/oraios/serena).\nFunctional Testing: To test if the MCP server is properly integrated, use the /mcp command in Claude Code or check the MCP settings in Cursor to ensure the status light is green.\nManual Tool Testing: For advanced users, tools can be tested via Postman by loading ca",
+      "url": "https://github.com/github/gh-aw/issues/24504",
+      "author": "anny999-ops",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-04T14:42:10Z",
+      "closed_at": "2026-04-04T17:28:26Z",
+      "days_open": 0.12,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 23268,
+      "title": "Add agentic workflow: Proactive Dependency Auto-Remediation for Dependabot PRs",
+      "body_preview": "## Proactive Security Auto-Remediation Workflow\n\n### Problem\n\nWhen Dependabot opens a PR for a dependency update (especially major versions or security patches), the update often introduces breaking API changes that cause CI to fail. These PRs then sit open, unmerged, and the security vulnerability remains unpatched \u2014 sometimes for weeks \u2014 until a human developer manually fixes the breakage.\n\nAn agentic workflow can close this gap by automatically detecting test failures on dependency update PRs",
+      "url": "https://github.com/github/gh-aw/issues/23268",
+      "author": "Henry-Shan",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-03-27T19:49:40Z",
+      "closed_at": "2026-03-28T12:21:57Z",
+      "days_open": 0.69,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 21871,
+      "title": "Model version generation issue",
+      "body_preview": "When specifying a model in the readme in the following manner:\n```yaml\nengine:\n  id: claude\n  model: claude-sonnet-4.6\n```\n\n\nand running `gh aw compile`, the corresponding yaml generated is:\n`--model claude-sonnet-4.6`\n\n\nas opposed to (based on claude's documentation):\n`--model claude-sonnet-4-6`\n.\n\nThis results in the workflow failing when run in CI. Example error:\n\n> \"result\":\"There's an issue with the selected model (claude-sonnet-4.6). It may not exist or you may not have access to it. Run -",
+      "url": "https://github.com/github/gh-aw/issues/21871",
+      "author": "haritha-px",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-03-19T23:13:23Z",
+      "closed_at": "2026-03-25T01:29:25Z",
+      "days_open": 5.09,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 21828,
+      "title": "Support `.lock.yaml` files",
+      "body_preview": "Right now, `workflow.md` gets compiled to `workflow.lock.yml`. If the file is renamed to `workflow.lock.yaml`, running `gh aw compile` creates a new `workflow.lock.yml` instead of updating the existing `workflow.lock.yaml`.\n\n#### Expected Behavior\n\nIf `workflow.lock.yaml` exists, `gh aw compile` should update it instead of generating `workflow.lock.yml`.\n\n#### Rationale\n\nEven though `.yml` is the default file extension for workflow files, GitHub supports `.yaml` files in `.github/workflows` ([li",
+      "url": "https://github.com/github/gh-aw/issues/21828",
+      "author": "porada",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-03-19T17:00:42Z",
+      "closed_at": "2026-03-25T01:29:59Z",
+      "days_open": 5.35,
+      "comments": 4,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 20961,
+      "title": "Support `engine: claude` with `COPILOT_GITHUB_TOKEN` (Copilot-hosted model backend)",
+      "body_preview": "Today in Agent HQ, I can invoke `@claude[agent]` on a PR and get a full Claude Code agent session. Claude Code's harness (tools, skills, CLAUDE.md, agentic loop) with model calls routed through GitHub's Copilot infrastructure, billed as premium requests on our Copilot Enterprise subscription. No Anthropic API key involved.\n\nIn gh-aw, `engine: claude` gives me that same Claude Code harness, but requires `ANTHROPIC_API_KEY` for model access. There's no way to use the Copilot backend that Agent HQ ",
+      "url": "https://github.com/github/gh-aw/issues/20961",
+      "author": "inigohidalgo",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-03-14T17:38:56Z",
+      "closed_at": "2026-03-15T02:38:37Z",
+      "days_open": 0.37,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 20717,
+      "title": "CI Coach workflow uses invalid 'copilot-requests' permission: root cause analysis and remediation plan",
+      "body_preview": "## Analysis\n\n### Error Recap\nThe CI validator reports this error when validating the `.github/workflows/ci-coach.lock.yml` workflow file:\n\n```\nThe workflow is not valid. .github/workflows/ci-coach.lock.yml (Line: 259, Col: 7): The permission 'copilot-requests' is not allowed\n```\n\n### Root Cause Investigation\n1. **GitHub Actions Permission Model**\n   - GitHub Actions supports a fixed set of permissions for jobs and workflows, documented at https://docs.github.com/en/actions/using-jobs/assigning-p",
+      "url": "https://github.com/github/gh-aw/issues/20717",
+      "author": "grahame-white",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [
+        "bug",
+        "community",
+        "workflows",
+        "priority-high",
+        "ai-inspected"
+      ],
+      "created_at": "2026-03-12T19:32:11Z",
+      "closed_at": "2026-04-10T10:40:07Z",
+      "days_open": 28.63,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 20263,
+      "title": "repository view only access no permissions granted",
+      "body_preview": "> For consistency with other docs, consider formatting the configuration keys the same way (e.g., **Resource owner**, **Repository access**, **Repository permissions**) as in docs/src/content/docs/reference/assign-to-copilot.mdx:75-86. This helps the \u201cfield name vs value\u201d distinction when scanning the setup steps.\n> \n> See below for a potential fix:\n> ```\n>   - **Resource owner**: select the organization this project belongs to.\n>   - **Repository access**: select the repositories that will run ",
+      "url": "https://github.com/github/gh-aw/issues/20263",
+      "author": "villarrealcecilia2024-png",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-09T21:03:52Z",
+      "closed_at": "2026-03-09T22:18:31Z",
+      "days_open": 0.05,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 20005,
+      "title": "Network issues with - push-to-pull-request-branch",
+      "body_preview": "I can't get `push-to-pull-request-branch` to work.  My test is to run `ci.sh` on an existing PR, and that just updates the `README.md` with the current time.  When it tries to push this via `push-to-pull-request-branch` I get errors (listed below).\n\nI am using `gh aw version v0.55.0`\n\n**I am running this workflow:**\n```md\n---\non:\n  pull_request:\n    types: [opened, synchronize, reopened]\npermissions:\n      contents: read\n      issues: read\n      pull-requests: read\nengine: copilot\nnetwork: defau",
+      "url": "https://github.com/github/gh-aw/issues/20005",
+      "author": "tinytelly",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "bug",
+        "community",
+        "workflows",
+        "needs-triage"
+      ],
+      "created_at": "2026-03-08T00:47:31Z",
+      "closed_at": "2026-03-15T14:38:49Z",
+      "days_open": 7.58,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 19263,
+      "title": "Agent targets owning repo instead of configured target-repo in cross-repo `create_pull_request`",
+      "body_preview": "### Summary\n\nWhen a workflow runs in repo A but configures `safe-outputs.create-pull-request.target-repo` to repo B (with `checkout.current: true` also pointing to repo B), the agent explicitly passes `repo: \"A\"` in the `create_pull_request` tool call. Safe-outputs correctly rejects this because repo A is not in the allowed list. The workflow appears successful but produces no PR -- only a failure issue.\n\n### Reproduction\n\n**Workflow file** (`.github/workflows/proxy-frontend-refactor.md` in `cai",
+      "url": "https://github.com/github/gh-aw/issues/19263",
+      "author": "Corb3nik",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-02T20:07:34Z",
+      "closed_at": "2026-03-02T20:15:44Z",
+      "days_open": 0.01,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 19224,
+      "title": "\u2728 Set up Copilot instructions",
+      "body_preview": "Configure instructions for this repository as documented in [Best practices for Copilot coding agent in your repository](https://gh.io/copilot-coding-agent-tips).\n\n<Onboard this repo>",
+      "url": "https://github.com/github/gh-aw/issues/19224",
+      "author": "hariatisalikon283-star",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-02T13:39:50Z",
+      "closed_at": "2026-03-02T13:50:52Z",
+      "days_open": 0.01,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 18636,
+      "title": "Azure MCP tool calls fail with 'invalid character \\'S\\'' via MCP gateway",
+      "body_preview": "## Summary\nWhen running Azure MCP tool calls through `gh-aw` MCP gateway, calls fail with:\n\n`calling \"tools/call\": invalid character 'S' looking for beginning of value`\n\nRelated upstream issue: https://github.com/microsoft/mcp/issues/1373\n\n## Environment\n- `gh aw` version: `v0.50.4`\n- Workflow engine: `copilot`\n- MCP gateway (`awmg`) version: `v0.1.5`\n- Azure MCP image: `mcr.microsoft.com/azure-sdk/azure-mcp:latest`\n- Runner OS: `ubuntu-latest`\n\n## Minimal Repro (`gh-aw` markdown)\n> Sanitized: r",
+      "url": "https://github.com/github/gh-aw/issues/18636",
+      "author": "dulalbert",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-02-27T05:57:33Z",
+      "closed_at": "2026-02-27T12:33:49Z",
+      "days_open": 0.28,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 18276,
+      "title": "Issue Monster fails",
+      "body_preview": "",
+      "url": "https://github.com/github/gh-aw/issues/18276",
+      "author": "kdehl16-web",
+      "author_contrib_count": 2,
+      "is_new_contributor": true,
+      "labels": [
+        "spam"
+      ],
+      "created_at": "2026-02-25T06:02:51Z",
+      "closed_at": "2026-02-25T06:02:58Z",
+      "days_open": 0.0,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 18193,
+      "title": "PR Triage Agent IRL:",
+      "body_preview": "<img width=\"395\" height=\"372\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/96882f42-2947-4058-b1ba-7f39b6914ed1\" />",
+      "url": "https://github.com/github/gh-aw/issues/18193",
+      "author": "kdehl16-web",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "spam"
+      ],
+      "created_at": "2026-02-24T18:27:57Z",
+      "closed_at": "2026-02-24T18:28:09Z",
+      "days_open": 0.0,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 16959,
+      "title": "[enhancement] Add issue type support to create-issue safe output",
+      "body_preview": "## Add `type` (Issue Type) support to `create-issue` safe output\n\n### Problem\n\nThe `create-issue` safe output currently supports `title-prefix`, `labels`, `assignees`, `max`, `expires`, `group`, `close-older-issues`, `target-repo`, `github-token`, and `footer` \u2014 but does **not** support specifying a [GitHub Issue Type](https://docs.github.com/en/issues/managing-your-tasks-with-tasklists/about-issue-types) (e.g., Bug, Feature, Task).\n\nOrganizations using GitHub Issue Types cannot set the type whe",
+      "url": "https://github.com/github/gh-aw/issues/16959",
+      "author": "steliosfran",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "ai-inspected"
+      ],
+      "created_at": "2026-02-19T23:11:59Z",
+      "closed_at": "2026-02-20T00:52:24Z",
+      "days_open": 0.07,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 15887,
+      "title": "Clarify import structure, expectations, and best practices in documentation",
+      "body_preview": "The current documentation for `imports` covers syntax and merging rules but doesn't clearly explain the recommended way to structure shared import files, or the expectations when using the same file in both frontmatter and markdown imports.\n\n## Problem\n- It's unclear if one should use separate files for configuration (frontmatter imports) and for workflow content (markdown imports), or if you can combine both in a single reusable component.\n- The behavior when importing the same file for both co",
+      "url": "https://github.com/github/gh-aw/issues/15887",
+      "author": "rspurgeon",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "documentation",
+        "enhancement"
+      ],
+      "created_at": "2026-02-15T05:59:47Z",
+      "closed_at": "2026-02-18T07:01:51Z",
+      "days_open": 3.04,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 15320,
+      "title": "[Security Advisory] Critical Infrastructure Vulnerabilities: 900+ Invariants Violated",
+      "body_preview": "**Summary**:\n",
+      "url": "https://github.com/github/gh-aw/issues/15320",
+      "author": "DataWizual-Labs",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "security",
+        "needs-triage"
+      ],
+      "created_at": "2026-02-13T07:10:40Z",
+      "closed_at": "2026-02-13T08:10:19Z",
+      "days_open": 0.04,
+      "comments": 0,
+      "state_reason": "not_planned"
+    }
+  ],
+  "bucket_B_completed_new_contributor": [
+    {
+      "number": 30336,
+      "title": "Activation comment / reaction not posted for `pull_request_review` triggers \u2014 `buildReactionLikeCondition` allowlist is incomplete",
+      "body_preview": "## Summary\n\nWhen a workflow's `on:` block includes `pull_request_review` (e.g. `pull_request_review: types: [submitted]`) and a run is triggered by that event, the gh-aw runtime does **not** post the auto-activation comment (the one configured via `safe-outputs.messages.run-started`) and does **not** apply the configured `on.reaction` emoji to the triggering item. The same auto-comment fires correctly for `issues`, `issue_comment`, `pull_request_review_comment`, `discussion`, `discussion_comment",
+      "url": "https://github.com/github/gh-aw/issues/30336",
+      "author": "mason-tim",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-05-05T11:08:41Z",
+      "closed_at": "2026-05-05T14:23:08Z",
+      "days_open": 0.14,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 30178,
+      "title": "gh aw upgrade: still warns 'Remove unsafe secrets from engine.env' despite fix in #29378 for compile",
+      "body_preview": "## Bug Report\n\n### Description\n\nIn [#29378](https://github.com/github/gh-aw/issues/29378), the recommendation was to use `engine.env` secrets for BYOK variables, and it was confirmed that `gh aw compile` correctly handles these without treating them as unsafe.\n\nHowever, `gh aw upgrade` was **not** updated with the same logic \u2014 it specifically flags `COPILOT_PROVIDER_API_KEY` as a security violation and removes it, producing:\n\n```\n\u2713 grumpy-reviewer.md\n  \u2022 Remove unsafe secrets from engine.env\n```",
+      "url": "https://github.com/github/gh-aw/issues/30178",
+      "author": "MauroDruwel",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-05-04T15:32:56Z",
+      "closed_at": "2026-05-04T19:23:28Z",
+      "days_open": 0.16,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 29499,
+      "title": "`Upload activation artifact` step missing `include-hidden-files: true` \u2014 silently drops `.claude`/`.github` from activation snapshot",
+      "body_preview": "## Problem\n\n`addActivationArtifactUploadStep` in [`pkg/workflow/compiler_activation_job_builder.go`](https://github.com/github/gh-aw/blob/main/pkg/workflow/compiler_activation_job_builder.go#L446-L457) emits the `actions/upload-artifact` step without `include-hidden-files: true`.\n\n`actions/upload-artifact@v4` introduced a breaking change: any path component starting with `.` is silently excluded from the archive by default ([changelog](https://github.com/actions/upload-artifact/blob/main/docs/MI",
+      "url": "https://github.com/github/gh-aw/issues/29499",
+      "author": "bartul",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-05-01T09:56:57Z",
+      "closed_at": "2026-05-01T10:35:50Z",
+      "days_open": 0.03,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 29379,
+      "title": "question: why is COPILOT_GITHUB_TOKEN still required when using an external provider?",
+      "body_preview": "## Context\n\nRelated to #29378 \u2014 I'm trying to use the Copilot engine with my own external model provider (BYOK).\n\n## Problem\n\nWhen setting up the workflow, I get an error because `COPILOT_GITHUB_TOKEN` is required \u2014 there's a shell script that checks for it. But if I'm pointing to my own model with my own API key, why does it need a GitHub Copilot token at all?\n\nMy current workaround is just filling in some dummy value (e.g. `github_pat_yeet`) to get past the check, which obviously feels wrong. ",
+      "url": "https://github.com/github/gh-aw/issues/29379",
+      "author": "MauroDruwel",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-30T20:22:54Z",
+      "closed_at": "2026-05-01T02:48:02Z",
+      "days_open": 0.27,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 29378,
+      "title": "docs: COPILOT_PROVIDER_* variables not documented and strict-mode allowlist not updated",
+      "body_preview": "## Problem\n\nI've been trying to use the Copilot engine with an external model provider (BYOK) but I can't find any documentation on how to actually set it up.\n\nI know there's a feature for this \u2014 I've seen references to `COPILOT_PROVIDER_*` variables in the Copilot CLI changelog \u2014 but there are no docs or examples in this repo explaining how to use them with `gh aw`.\n\n## What I don't know\n\n- Where to put the provider API key (is it in `engine.env`? somewhere else?)\n- Which variables are needed (",
+      "url": "https://github.com/github/gh-aw/issues/29378",
+      "author": "MauroDruwel",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected",
+        "awf"
+      ],
+      "created_at": "2026-04-30T20:19:10Z",
+      "closed_at": "2026-05-01T01:51:52Z",
+      "days_open": 0.23,
+      "comments": 7,
+      "state_reason": "completed"
+    },
+    {
+      "number": 29301,
+      "title": "`repo-memory` push fails with \"Commits must have verified signatures\" \u2014 `push_repo_memory.cjs` should use `pushSignedCommits`",
+      "body_preview": "# `repo-memory` push fails with \"Commits must have verified signatures\" \u2014 `push_repo_memory.cjs` should use `pushSignedCommits`\n\n## Summary\n\nThe `repo-memory` safe-output mechanism uses an unsigned `git commit` + `git push` to write the memory branch. Repositories (and orgs) that enforce a ruleset requiring **\"Commits must have verified signatures\"** on all branches reject every push from this code path with:\n\n```\nremote: error: GH013: Repository rule violations found for refs/heads/memory/<id>.",
+      "url": "https://github.com/github/gh-aw/issues/29301",
+      "author": "mason-tim",
+      "author_contrib_count": 2,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-30T12:09:04Z",
+      "closed_at": "2026-04-30T15:25:48Z",
+      "days_open": 0.14,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 29228,
+      "title": "Allow for setting team_reviewers on add_reviewer tool call",
+      "body_preview": "We are trying to build a PR triage process that can use a variety of information and assign 1 to 3 user's or teams as necessary. While safe_outputs seems to work great for assigning specific users via the add_reviewer tool, I can't seem to find a way to attach existing teams from within an organization.\n\nThe handler code on the safe_outputs side has plumbing for both arrays (it prints \"Requested team reviewers: []\" in the logs), but the MCP tool definition doesn't expose a team_reviewers input t",
+      "url": "https://github.com/github/gh-aw/issues/29228",
+      "author": "dholmes",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-30T01:03:50Z",
+      "closed_at": "2026-04-30T01:29:45Z",
+      "days_open": 0.02,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 29009,
+      "title": "Add `<img>` to safe-outputs HTML tag allowlist",
+      "body_preview": "## Feature: Allow `<img>` tags in safe-output content\n\n### Context\n\nIn #17298 (fixed by #17346, shipped in v0.47.6), the `convertXmlTags()` allowlist was expanded to include GFM inline tags (`abbr`, `del`, `ins`, `kbd`, `mark`, `s`, `span`). The same logic should be extended to `<img>`.\n\n### Problem\n\n`<img>` tags in safe-output bodies (e.g. `create-issue`, `update-issue`) are converted to parentheses:\n\n```\n<img align=\"right\" width=\"120\" src=\"https://example.com/image.png\" alt=\"Mascot\" />\n```\n\nbe",
+      "url": "https://github.com/github/gh-aw/issues/29009",
+      "author": "sg650",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "smoke",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-29T00:01:53Z",
+      "closed_at": "2026-04-30T23:56:39Z",
+      "days_open": 2.0,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28957,
+      "title": "feature request: compile time validation for front matter trigger conditions",
+      "body_preview": "I configured a workflow to enable PR review on copilot PRs through a slash command trigger:\n```\n---\non:\n  slash_command:\n    name: rust-review\n    events: [pull_request, pull_request_comment]\n  bots:\n    - \"copilot[bot]\"\ndescription: On-demand Rust code review triggered by /rust-review command on PRs\npermissions:\n  contents: read\n  pull-requests: read\n  issues: read\ntools:\n  github:\n    toolsets: [default]\nnetwork:\n  allowed: [defaults, rust]\nsafe-outputs:\n  add-comment:\n    max: 3\n---\n```\nHowev",
+      "url": "https://github.com/github/gh-aw/issues/28957",
+      "author": "jamesadevine",
+      "author_contrib_count": 2,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-28T15:35:37Z",
+      "closed_at": "2026-04-29T05:26:55Z",
+      "days_open": 0.58,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28812,
+      "title": "Gh add does not recursively include shared markdowns",
+      "body_preview": "Use case\n\nGh add cp token audit",
+      "url": "https://github.com/github/gh-aw/issues/28812",
+      "author": "NikolajBjorner",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-04-27T22:31:41Z",
+      "closed_at": "2026-04-28T02:29:24Z",
+      "days_open": 0.17,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28704,
+      "title": "repo-memory file size limits are very small",
+      "body_preview": "I am running into an issue where I want to write more than 100KB of files in a run but I'm blocked because there is a hard limit on the patch size limit.\n\nCan the configurable limit be increased?",
+      "url": "https://github.com/github/gh-aw/issues/28704",
+      "author": "JamesNK",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-27T11:49:22Z",
+      "closed_at": "2026-04-28T05:44:34Z",
+      "days_open": 0.75,
+      "comments": 4,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28657,
+      "title": "was curious how gh-aw thinks about agent actions, especially when an agent wants to comment, open PRs, modify files, or call external tools.",
+      "body_preview": "Hey, I\u2019m exploring how agentic workflows are being designed inside CI environments. I was curious how gh-aw thinks about agent actions, especially when an agent wants to comment, open PRs, modify files, or call external tools. Are actions generally constrained by the GitHub Actions runtime, or is there a separate approval model you recommend?",
+      "url": "https://github.com/github/gh-aw/issues/28657",
+      "author": "mdashrraf",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected",
+        "scout"
+      ],
+      "created_at": "2026-04-27T04:24:39Z",
+      "closed_at": "2026-04-28T05:43:53Z",
+      "days_open": 1.06,
+      "comments": 5,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28612,
+      "title": "Add `gh aw run` guidance to the dispatcher agent template",
+      "body_preview": "## Add `gh aw run` guidance to the dispatcher agent template\n\n### Problem\n\nThe dispatcher agent template at [`.github/agents/agentic-workflows.agent.md`](https://github.com/github/gh-aw/blob/main/.github/agents/agentic-workflows.agent.md) does not mention `gh aw run` anywhere. As a result, agents loaded with this dispatcher (and the humans they're paired with) reach for `gh workflow run <file>.lock.yml` when they want to trigger an agentic workflow on demand.\n\nThat works, but it bypasses everyth",
+      "url": "https://github.com/github/gh-aw/issues/28612",
+      "author": "sg650",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-26T16:29:07Z",
+      "closed_at": "2026-04-26T17:37:34Z",
+      "days_open": 0.05,
+      "comments": 2,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28470,
+      "title": "See large increase in runtime cost wiith 0.71.0, possible 0.70.0",
+      "body_preview": "Hi,\n\nNot sure why, \n\nCompleted https://github.com/Hack23/riksdagsmonitor/actions/runs/24931824129/job/73010756593\nCancelled https://github.com/Hack23/euparliamentmonitor/actions/runs/24931834590 \n\nAlways pretty stable on coding_agent_premium_request  and still are.\n\nSince yesterday copilot_premium_request increased with a factor 20-30 X for running each workflow. \n\nFirst thought I got hacked, paranoid but cost stopped when turning of the workflows. \n\nAnybody else seen any regression in cost chan",
+      "url": "https://github.com/github/gh-aw/issues/28470",
+      "author": "pethers",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected",
+        "scout"
+      ],
+      "created_at": "2026-04-25T14:02:39Z",
+      "closed_at": "2026-04-25T20:02:35Z",
+      "days_open": 0.25,
+      "comments": 12,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28317,
+      "title": "Test issue",
+      "body_preview": "",
+      "url": "https://github.com/github/gh-aw/issues/28317",
+      "author": "gh-aw-bot",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-24T18:00:50Z",
+      "closed_at": "2026-04-24T18:20:17Z",
+      "days_open": 0.01,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28315,
+      "title": "[Bug] protected-files object form fails compilation despite being documented",
+      "body_preview": "## Summary\n\nThe `protected-files` field under `create-pull-request` safe-outputs is [documented](https://github.github.com/gh-aw/reference/safe-outputs-pull-requests/#policy-options) as supporting an object form with `policy` and `exclude`, but `gh aw compile` rejects it with a schema validation error.\n\n## Steps to reproduce\n\n1. Add the following to a workflow's frontmatter:\n\n```yaml\nsafe-outputs:\n  create-pull-request:\n    title-prefix: \"[docs] \"\n    protected-files:\n      policy: fallback-to-i",
+      "url": "https://github.com/github/gh-aw/issues/28315",
+      "author": "edgeq",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-24T16:36:53Z",
+      "closed_at": "2026-04-24T21:39:08Z",
+      "days_open": 0.21,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28308,
+      "title": "[Bug] gh aw add writes short-form source: path that breaks gh aw update for cross-repo workflows",
+      "body_preview": "## Summary\n\nWhen using `gh aw add` to install a workflow from another repository, the generated `source:` field uses a short-form path that omits the `.github/workflows/` prefix. This causes `gh aw update` to fail with a 404 when it tries to fetch the file from the source repo.\n\n## Steps to reproduce\n\n1. Create a shared workflow repo with a workflow at `.github/workflows/my-workflow.md`\n2. From a consuming repo, run:\n   ```bash\n   gh aw add my-org/shared-workflows/my-workflow@main\n   ```\n3. Obse",
+      "url": "https://github.com/github/gh-aw/issues/28308",
+      "author": "edgeq",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-24T15:44:51Z",
+      "closed_at": "2026-04-24T22:52:49Z",
+      "days_open": 0.3,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28281,
+      "title": "[Bug] Detection step `runs-on` not inherited from `runs-on` or `runs-on-slim`",
+      "body_preview": "I have the following frontmatter specification\n```\nruns-on: ubuntu-latest-cool\nruns-on-slim: ubuntu-latest-cool\n```\n\nI also updated the `copilot-setup-steps.yaml` to the same\n```yaml \njobs:\n  copilot-setup-steps:\n    runs-on: ubuntu-latest-cool\n```\n\nAnd when I run `gh aw compile` the all the steps reflect that image, _except_ the `Detection` step\n```yaml\n  detection:\n    needs:\n      - activation\n      - agent\n    if: >\n      always() && needs.agent.result != 'skipped' && (needs.agent.outputs.ou",
+      "url": "https://github.com/github/gh-aw/issues/28281",
+      "author": "petercort",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected",
+        "scout"
+      ],
+      "created_at": "2026-04-24T13:43:55Z",
+      "closed_at": "2026-04-24T23:45:55Z",
+      "days_open": 0.42,
+      "comments": 3,
+      "state_reason": "completed"
+    },
+    {
+      "number": 28143,
+      "title": "Threat-detection job omits Setup Node.js but launches copilot_driver.cjs via node \u2192 'node: command not found'",
+      "body_preview": "## Summary\n\n**Affected engine: copilot**\n\nThe gh-aw workflow compiler emits `Setup Node.js` in the main `agent` job (via `DetectRuntimeRequirements` in `compiler_yaml_main_job.go:147`) but not in the separately compiled `detection` job, even though that job unconditionally wraps the Copilot CLI with `node ${RUNNER_TEMP}/gh-aw/actions/copilot_driver.cjs` (`copilot_engine_execution.go:186-200`). On any runner without Node preinstalled on `PATH`, the detection job dies with `node: command not found",
+      "url": "https://github.com/github/gh-aw/issues/28143",
+      "author": "romainh-betclic",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-23T18:26:55Z",
+      "closed_at": "2026-04-23T21:59:38Z",
+      "days_open": 0.15,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 27880,
+      "title": "gh aw compile reports allowed-base-branches as unknown for safe-outputs.create-pull-reques",
+      "body_preview": "`gh aw compile` rejects this workflow:\n```\n---\nname: \"Test\"\ndescription: \"Test\"\n\non:\n  workflow_dispatch:\npermissions:\n  contents: read\n  pull-requests: read\n\nengine:\n  id: copilot\n  model: gpt-5.4\n\nnetwork:\n  allowed:\n    - defaults\n\ntools:\n  edit:\n  bash: true\n\nsafe-outputs:\n  create-pull-request:\n    allowed-base-branches:\n      - main\n      - release/*\n---\ntest\n```\nWith this error:\n```\n.github\\workflows\\test.md:25:5: error: Unknown property: allowed-base-branches. Valid fields are: allow-emp",
+      "url": "https://github.com/github/gh-aw/issues/27880",
+      "author": "tsm-harmoney",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-04-22T16:18:51Z",
+      "closed_at": "2026-04-22T23:30:06Z",
+      "days_open": 0.3,
+      "comments": 0,
+      "state_reason": "completed"
+    }
+  ],
+  "bucket_C_not_planned_regular_contributor": [
+    {
+      "number": 28868,
+      "title": "Hang and timeout while running workflow",
+      "body_preview": "I have a workflow that is hanging. Relevent snippit from logs:\n\n```\n2026-04-28T06:07:28.8566496Z The changelog looks correct. Now let me publish it to the wiki:\n2026-04-28T06:07:28.8566894Z \n2026-04-28T06:07:29.3674738Z \u25cf Final check before publish (shell)\n2026-04-28T06:07:29.3675417Z   \u2502 python3 -c \"\n2026-04-28T06:07:29.3676333Z   \u2502 with open('/tmp/gh-aw/agent/new_changelog.md') as f:\n2026-04-28T06:07:29.3677047Z   \u2502 content = f.read()\n2026-04-28T06:07:29.3677559Z   \u2502 print(len(content), 'chars",
+      "url": "https://github.com/github/gh-aw/issues/28868",
+      "author": "JamesNK",
+      "author_contrib_count": 4,
+      "is_new_contributor": false,
+      "labels": [
+        "community",
+        "ai-inspected"
+      ],
+      "created_at": "2026-04-28T07:02:07Z",
+      "closed_at": "2026-04-30T05:27:39Z",
+      "days_open": 1.93,
+      "comments": 4,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 28070,
+      "title": "Compiler should default agent artifact retention to 1 day \u2014 90-day default exposes MCP logs, rendered prompts, and token-type fi\n[Content truncated due to length]",
+      "body_preview": "## Summary\n\nThe gh-aw compiler generates `Upload agent artifacts` steps without a `retention-days:` key, so they inherit GitHub Actions' 90-day default. These artifacts contain `agent-stdio.log` (full execution stream), `mcp-logs/` (per-call MCP request/response pairs), `prompt.txt` (rendered prompt including any cache-memory injections), `github_rate_limits.jsonl` (token-type fingerprint), and `safeoutputs.jsonl`. Any agent running in the same repository whose tool allowlist includes `list_work",
+      "url": "https://github.com/github/gh-aw/issues/28070",
+      "author": "szabta89",
+      "author_contrib_count": 35,
+      "is_new_contributor": false,
+      "labels": [
+        "gh-aw-security-finding"
+      ],
+      "created_at": "2026-04-23T12:23:46Z",
+      "closed_at": "2026-04-23T12:34:24Z",
+      "days_open": 0.01,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27257,
+      "title": "Consider improving spelling",
+      "body_preview": "I have a tool that identifies spelling errors (as well as stylistic errors, including #27254). Based on that tool, I have a set of commits that might be worth considering, but this repository doesn't take PRs, so, hopefully someone will look through these commits...\n\nhttps://github.com/github/gh-aw/compare/main...jsoref:gh-aw:spelling?expand=1",
+      "url": "https://github.com/github/gh-aw/issues/27257",
+      "author": "jsoref",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-04-20T01:37:53Z",
+      "closed_at": "2026-04-20T01:39:18Z",
+      "days_open": 0.0,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27256,
+      "title": "links should have good text content",
+      "body_preview": "There are basic points to links:\n1. they shouldn't be 404\n2. they shouldn't be misleading\n\nBeyond that:\n#### Do not use `(click) here` links\nFor more information, see:\n * https://www.w3.org/QA/Tips/noClickHere\n * https://webaim.org/techniques/hypertext/link_text\n * https://granicus.com/blog/why-click-here-links-are-bad/\n * https://heyoka.medium.com/dont-use-click-here-f32f445d1021\n\nhttps://github.com/github/gh-aw/compare/main...jsoref:gh-aw:improve-links?expand=1\n\n",
+      "url": "https://github.com/github/gh-aw/issues/27256",
+      "author": "jsoref",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-04-20T01:29:54Z",
+      "closed_at": "2026-04-20T01:39:41Z",
+      "days_open": 0.01,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27254,
+      "title": "`apt-key` is deprecated",
+      "body_preview": "You can read a little about it here: https://askubuntu.com/questions/1286545/what-commands-exactly-should-replace-the-deprecated-apt-key\n\nThese changes would fix this:\nhttps://github.com/github/gh-aw/compare/main...jsoref:gh-aw:apt-key-is-deprecated?expand=1\n\n",
+      "url": "https://github.com/github/gh-aw/issues/27254",
+      "author": "jsoref",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-04-20T01:27:06Z",
+      "closed_at": "2026-04-20T01:41:28Z",
+      "days_open": 0.01,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27253,
+      "title": "message lint complains about lots of messages...",
+      "body_preview": "Someone should fix all of the message lint complaints.\n\nHere's my draft at a bunch of them:\nhttps://github.com/github/gh-aw/compare/main...jsoref:gh-aw:message-lint?expand=1\n\nit's really silly to have CI complain about each run for things that the project clearly knows about.",
+      "url": "https://github.com/github/gh-aw/issues/27253",
+      "author": "jsoref",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-04-20T01:25:24Z",
+      "closed_at": "2026-04-20T01:43:36Z",
+      "days_open": 0.01,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27252,
+      "title": "Test descriptions trigger annotations",
+      "body_preview": "Using `##[error]` in content that's parsed by GitHub's log parser triggers annotations which are really stupid.\n\nThis would fix it:\nhttps://github.com/github/gh-aw/compare/main...jsoref:gh-aw:prevent-test-descriptions-from-triggering-annotations?expand=1\n\nas would anything else that removes `##[error]` from the test names which are logged by each run.",
+      "url": "https://github.com/github/gh-aw/issues/27252",
+      "author": "jsoref",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-04-20T01:22:56Z",
+      "closed_at": "2026-04-20T01:45:32Z",
+      "days_open": 0.02,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 27250,
+      "title": "Actions are out of date",
+      "body_preview": "You're using a whole bunch of outdated actions -- many of which trigger deprecation warnings.\n\nThere are also cases of stale comments that make no sense, e.g.: https://github.com/github/gh-aw/blob/b50d2586f3b0453447859697656760445e06e04c/.github/workflows/copilot-maintenance.yml#L31\n\nThese changes would more or less do the right thing, but again, this repository doesn't take external PRs:\nhttps://github.com/github/gh-aw/compare/main...jsoref:gh-aw:update-actions?expand=1\n\n",
+      "url": "https://github.com/github/gh-aw/issues/27250",
+      "author": "jsoref",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-04-20T01:20:40Z",
+      "closed_at": "2026-04-20T01:48:06Z",
+      "days_open": 0.02,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 26593,
+      "title": "Lock file integrity check detects stale `.md` source but not direct `.lock.yml` YAML tampering \u2014 permission escalation possible \n[Content truncated due to length]",
+      "body_preview": "## Summary\n\n`check_workflow_timestamp_api.cjs` validates that the `.md` source has not changed since compilation by comparing `hash(.md frontmatter)` against the hash stored in the `gh-aw-metadata` comment of the `.lock.yml`. It does **not** verify that the `.lock.yml` YAML content matches what the compiler would produce from the current `.md`. An attacker with repository write access can edit the `.lock.yml` directly \u2014 for example changing `issues: read` to `issues: write`, widening the network",
+      "url": "https://github.com/github/gh-aw/issues/26593",
+      "author": "szabta89",
+      "author_contrib_count": 27,
+      "is_new_contributor": false,
+      "labels": [
+        "gh-aw-security-finding"
+      ],
+      "created_at": "2026-04-16T09:28:03Z",
+      "closed_at": "2026-04-16T13:58:57Z",
+      "days_open": 0.19,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 25102,
+      "title": "Claude engine safeoutputs MCP shared bearer token enables direct write-sink bypass in local-analysis environment",
+      "body_preview": "## Summary\n\nIn the `local-analysis` (Claude Code engine) environment, the MCP gateway bearer token written to `/tmp/gh-aw/mcp-config/mcp-servers.json` (mode 0600) is **shared between the `github` (read) and `safeoutputs` (write-sink) MCP servers**. Because `host.docker.internal` is listed in `NO_PROXY`, direct HTTP calls to both MCP servers bypass the Squid proxy firewall entirely. Any subprocess running as the `runner` user can read this file, open an authenticated MCP session with the safeoutp",
+      "url": "https://github.com/github/gh-aw/issues/25102",
+      "author": "szabta89",
+      "author_contrib_count": 20,
+      "is_new_contributor": false,
+      "labels": [
+        "gh-aw-security-finding"
+      ],
+      "created_at": "2026-04-07T14:08:48Z",
+      "closed_at": "2026-04-10T11:31:58Z",
+      "days_open": 2.89,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 23960,
+      "title": "test: comprehensive testing improvements for audit commands",
+      "body_preview": "## Parent Epic\nPart of #22735\n\n## Summary\nThe audit feature has 12 test files (~200KB) with good unit coverage for data structures and computation, but has gaps in output rendering verification, edge case handling, and integration testing. This issue covers 4 testing improvement areas.\n\n## Area 1: Golden File Tests for Audit Output Rendering\n\n**Why:** Render functions are only spot-checked with substring assertions. No snapshot testing catches unintended regressions.\n\n**Files to create:**\n- `pkg",
+      "url": "https://github.com/github/gh-aw/issues/23960",
+      "author": "Mossaka",
+      "author_contrib_count": 178,
+      "is_new_contributor": false,
+      "labels": [
+        "enhancement",
+        "testing",
+        "audit",
+        "cli"
+      ],
+      "created_at": "2026-04-01T21:53:30Z",
+      "closed_at": "2026-04-03T05:25:28Z",
+      "days_open": 1.31,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 23740,
+      "title": "Safe-outputs write-sink MCP must use a distinct, scoped bearer token not shared with the read GitHub MCP",
+      "body_preview": "## Summary\n\nIn Copilot-engine (`--allow-all-tools`) `github-edit` workflows, the MCP gateway API key is shared between the GitHub read MCP server and the safe-outputs **write-sink** MCP server, and is written in plaintext to `/home/runner/.copilot/mcp-config.json` where it is readable by all runner-user processes. Any bash code with access to the runner filesystem can read this key, open a safeoutputs MCP session over HTTP, and invoke write tools (`create_issue`, `add_comment`, etc.), queuing en",
+      "url": "https://github.com/github/gh-aw/issues/23740",
+      "author": "szabta89",
+      "author_contrib_count": 12,
+      "is_new_contributor": false,
+      "labels": [
+        "gh-aw-security-finding"
+      ],
+      "created_at": "2026-03-31T14:17:48Z",
+      "closed_at": "2026-04-10T11:34:33Z",
+      "days_open": 9.89,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 23184,
+      "title": "feat: surface audit data extraction errors in non-verbose mode",
+      "body_preview": "## Context\n\nIn `pkg/cli/audit.go` lines ~294-351, there's a repeated pattern where data extraction errors are only shown in `--verbose` mode:\n\n```go\nmissingTools, err := extractMissingToolsFromRun(...)\nif err != nil && verbose {  // Only shows if --verbose!\n    fmt.Fprintln(os.Stderr, console.FormatWarningMessage(...))\n}\n```\n\nThis applies to: firewall log parsing, MCP tool extraction, policy analysis, gateway metrics, access logs, and missing tools/data extraction.\n\nWhen these fail silently, the",
+      "url": "https://github.com/github/gh-aw/issues/23184",
+      "author": "Mossaka",
+      "author_contrib_count": 168,
+      "is_new_contributor": false,
+      "labels": [
+        "enhancement",
+        "audit",
+        "cli"
+      ],
+      "created_at": "2026-03-26T23:41:02Z",
+      "closed_at": "2026-04-06T16:31:25Z",
+      "days_open": 10.7,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 23051,
+      "title": "chore: bump gh-aw-firewall to v0.25.2",
+      "body_preview": "## Summary\n\nBump the gh-aw-firewall (awf) version reference to v0.25.2.\n\n## What's new in v0.25.2\n\n- **`--allow-host-service-ports`**: New CLI flag allowing agents to reach GitHub Actions `services:` containers (PostgreSQL, Redis, MySQL) on the host. Traffic restricted to host gateway IPs only.\n\n## What's new in v0.25.1\n\n- **Playwright/localhost fix**: `--allow-domains localhost` now works \u2014 adds FW_WRAPPER gateway ACCEPT rules, fixes `/etc/hosts` localhost resolution, propagates `AWF_ALLOW_HOST",
+      "url": "https://github.com/github/gh-aw/issues/23051",
+      "author": "Mossaka",
+      "author_contrib_count": 168,
+      "is_new_contributor": false,
+      "labels": [
+        "feature"
+      ],
+      "created_at": "2026-03-26T05:45:59Z",
+      "closed_at": "2026-03-31T15:54:10Z",
+      "days_open": 5.42,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 22914,
+      "title": "gh-aw compiler must reject env.* expressions in markdown per documented safety policy",
+      "body_preview": "This follows up on a reviewed security finding from `githubnext/gh-aw-security`. The finding indicates a likely gh-aw defect in the compile-time expression safety boundary, where `env.*` expressions (e.g. `$\\{\\{ env.GITHUB_TOKEN }}`) in workflow markdown are accepted by `gh-aw compile` without error and propagated into the generated lock file as `GH_AW_ENV_GITHUB_TOKEN: $\\{\\{ env.GITHUB_TOKEN }}` \u2014 wired into the agent's runtime environment. The canonical documentation ([reference/templating/](h",
+      "url": "https://github.com/github/gh-aw/issues/22914",
+      "author": "szabta89",
+      "author_contrib_count": 6,
+      "is_new_contributor": false,
+      "labels": [
+        "gh-aw-security-finding"
+      ],
+      "created_at": "2026-03-25T15:05:16Z",
+      "closed_at": "2026-04-10T11:30:26Z",
+      "days_open": 15.85,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 22585,
+      "title": "Feature request: force-rerun semantic for workflow_dispatch against the same bound issue",
+      "body_preview": "## Feature request\n\nWhen a `workflow_dispatch` run partially fails and an operator re-dispatches against the **same `issue_number`**, prior-run state (repo-memory, summary comments on the bound issue, or both) can cause the agent to conclude the work is already done and emit a noop. There is no mechanism to force a fresh evaluation.\n\nThis is a feature request for an explicit force-rerun semantic, not a bug report about any single component.\n\n## Observed behavior\n\nRepo: `Aurrin-Ventures/aurrin-pl",
+      "url": "https://github.com/github/gh-aw/issues/22585",
+      "author": "samuelkahessay",
+      "author_contrib_count": 28,
+      "is_new_contributor": false,
+      "labels": [
+        "community"
+      ],
+      "created_at": "2026-03-24T03:47:07Z",
+      "closed_at": "2026-04-23T13:44:57Z",
+      "days_open": 30.42,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 22010,
+      "title": "Security Alert Burndown",
+      "body_preview": "## Campaign Overview\n\n**Objective**: Systematically burn down the code security alerts backlog, prioritizing file write vulnerabilities\n\nThis Epic issue tracks the overall progress of the campaign. All work items are sub-issues of this Epic.\n\n**Campaign Details:**\n- Campaign ID: `security-alert-burndown`\n- Project Board: https://github.com/orgs/githubnext/projects/122\n- Worker Workflows: `code-scanning-fixer`, `security-fix-pr`, `security-review`\n\n---\n`campaign_id: security-alert-burndown`\n\n\n\n\n>",
+      "url": "https://github.com/github/gh-aw/issues/22010",
+      "author": "mnkiefer",
+      "author_contrib_count": 264,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2026-03-20T18:28:51Z",
+      "closed_at": "2026-03-20T20:49:03Z",
+      "days_open": 0.1,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 21754,
+      "title": "Capped max items in update-discussion safe output",
+      "body_preview": "A user reported the following error where `max` items for `update-discussion` safe output is capped at `100`. This seems to be a hard limit enforced by the schema for safe-outputs which is probably in place to prevent runaway agents from making massive changes in a single execution. From the user-based perspective, this is not ideal since to run more than 100 updates, they would need to run multiple choice.\n```\nerror: 'safe-outputs/update-discussion' (line 31, col 21): at '/safe-outputs/update-d",
+      "url": "https://github.com/github/gh-aw/issues/21754",
+      "author": "mnkiefer",
+      "author_contrib_count": 261,
+      "is_new_contributor": false,
+      "labels": [
+        "bug",
+        "needs-triage"
+      ],
+      "created_at": "2026-03-19T07:02:45Z",
+      "closed_at": "2026-03-19T08:00:47Z",
+      "days_open": 0.04,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 21703,
+      "title": "Performance report",
+      "body_preview": "\n## Run 23264510315 \u2014 Timing Analysis\n**[GitHub Actions Run](https://github.com/dsyme/fv-squad/actions/runs/23264510315)**\n\n| | Time |\n|---|---|\n| **Total wall-clock** | **7m 3s (423s)** |\n| Agentic LLM reasoning (excluded) | 4m 1s (241s) |\n| **Non-reasoning overhead** | **3m 2s (182s)** |\n\n---\n\n## Hierarchical Timing Breakdown\n\n### 1. `activation` job \u2014 7s (20:04:13\u201320:04:20)\n| Step | Time |\n|---|---|\n| Runner provisioning + action repository downloads (3 actions) | 3s |\n| `gh-aw-actions/setup`",
+      "url": "https://github.com/github/gh-aw/issues/21703",
+      "author": "dsyme",
+      "author_contrib_count": 516,
+      "is_new_contributor": false,
+      "labels": [
+        "performance"
+      ],
+      "created_at": "2026-03-19T01:29:07Z",
+      "closed_at": "2026-04-15T00:04:29Z",
+      "days_open": 26.94,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 20967,
+      "title": "GHES: Replace opaque Copilot errors with actionable messages",
+      "body_preview": "## Problem\n\nWhen the Copilot engine fails on GHES, error messages are opaque and do not indicate the root cause or how to fix it.\n\n| Actual root cause | Error users see |\n|---|---|\n| Copilot not licensed for enterprise/org | `Error loading models: Error: Failed to list models: 400 Bad Request` |\n| Firewall blocks `api.<ghes-host>:443` | Firewall audit shows blocked domain, but no guidance |\n| `gh` CLI not configured for GHES | `Could not resolve to a Repository with the name 'owner/repo'` |\n| Wr",
+      "url": "https://github.com/github/gh-aw/issues/20967",
+      "author": "lpcox",
+      "author_contrib_count": 16,
+      "is_new_contributor": false,
+      "labels": [
+        "enhancement",
+        "cli"
+      ],
+      "created_at": "2026-03-14T18:26:11Z",
+      "closed_at": "2026-03-15T02:37:32Z",
+      "days_open": 0.34,
+      "comments": 0,
+      "state_reason": "not_planned"
+    }
+  ]
+}

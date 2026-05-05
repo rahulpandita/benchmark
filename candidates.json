@@ -1,0 +1,1002 @@
+{
+  "metadata": {
+    "repository": "tldraw/tldraw",
+    "fetched_at": "2026-05-05T13:40:19.715794+00:00",
+    "target_per_bucket": 20,
+    "not_planned_issues_fetched": 209,
+    "completed_issues_fetched": 500,
+    "contributor_threshold": 3,
+    "description": "Phase 1 broad candidate download. Bucket A and C come from not_planned issues; Bucket B from completed issues. Contributor status is determined by prior issues+PRs at time of filing (<=3 = new, >3 = regular). The issue itself is excluded from the count."
+  },
+  "bucket_A_not_planned_new_contributor": [
+    {
+      "number": 8366,
+      "title": "Security: timing attack in auth token comparison (CWE-208)",
+      "body_preview": "## Summary\nThe authentication token comparison uses `===` which is vulnerable to timing attacks (CWE-208).\n\n## Details\n- **CWE**: CWE-208 (Observable Timing Discrepancy)\n- **Severity**: Medium\n- **File**: `apps/dotcom/sync-worker/src/healthCheckRoutes.ts`\n- **Impact**: An attacker can determine the secret value character-by-character by measuring response time differences.\n\n## Suggested Fix\nUse constant-time comparison: `crypto.timingSafeEqual()` (Node.js).\n\n---\n*Found by [SpiderShield](https://",
+      "url": "https://github.com/tldraw/tldraw/issues/8366",
+      "author": "spidershield-contrib",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-28T01:25:35Z",
+      "closed_at": "2026-03-28T12:06:34Z",
+      "days_open": 0.45,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 8339,
+      "title": "feat: warn when duplicate bindings are created",
+      "body_preview": "## Summary\nAdds a warning when duplicate bindings are created within the same batch.\n\n## What I did\n- Detect duplicate bindings using key (fromId-toId-type)\n- Log console warning\n- Added test for duplicate bindings\n\n## Branch\nhttps://github.com/Valley-15/tldraw/tree/feat/duplicate-binding-warning\n\nTests are passing locally.",
+      "url": "https://github.com/tldraw/tldraw/issues/8339",
+      "author": "Valley-15",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-25T10:44:40Z",
+      "closed_at": "2026-03-28T12:06:32Z",
+      "days_open": 3.06,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 8310,
+      "title": "Aplikasi Android Control & Sinkronisasi Jam Digital Shalat",
+      "body_preview": "Kembangkan aplikasi Android untuk:\n\n- Menghubungkan ke jam digital ESP8266 melalui WiFi (mode AP atau client, sesuai firmware).\n- Pengaturan jadwal shalat: pilih kota, metode hisab (mode multi untuk ragam organisasi).\n- Pengaturan jam, tanggal, dan format tampilan (misal 12/24 jam).\n- Pengaturan azan, beep (ON/OFF), pilihan suara dan volume.\n- Reminder: setting beep 5 menit sebelum dan 5 menit sesudah azan.\n- Sinkronisasi pengaturan dari aplikasi ke perangkat ESP8266.\n- Pengaturan tersimpan loka",
+      "url": "https://github.com/tldraw/tldraw/issues/8310",
+      "author": "awanputih",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-22T05:55:18Z",
+      "closed_at": "2026-03-23T09:27:34Z",
+      "days_open": 1.15,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 8309,
+      "title": "Firmware ESP8266 Jam Digital Shalat - Multi Mode & Jadwal Offline",
+      "body_preview": "Kembangkan firmware untuk Jam Digital Shalat berbasis ESP8266 dengan fitur utama sebagai berikut:\n\n- Menggunakan Real Time Clock (RTC, misal DS3231) agar waktu tetap akurat walau listrik mati.\n- Menampilkan jam, tanggal, dan bulan pada display (jenis LCD/OLED disesuaikan).\n- Menampilkan 5 jadwal shalat akurat (Subuh, Dzuhur, Ashar, Maghrib, Isya) offline, sesuai hisab Kemenag, untuk berbagai kota Indonesia. Jadwal dapat dipilih mode/metodenya.\n- Pergantian panel otomatis antara jam utama dengan ",
+      "url": "https://github.com/tldraw/tldraw/issues/8309",
+      "author": "awanputih",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-22T05:53:54Z",
+      "closed_at": "2026-03-23T09:27:33Z",
+      "days_open": 1.15,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 8308,
+      "title": "Dokumentasi Lengkap & Panduan Deploy Jam Digital Shalat",
+      "body_preview": "Siapkan panduan lengkap, diagram, dan dokumentasi project Jam Digital Shalat:\n\n- Panduan flashing firmware ke ESP8266, wiring hardware (DS3231, display, buzzer, dsb)\n- Tutorial penggunaan aplikasi Android serta pairing ke perangkat jam\n- Penjelasan cara memilih kota, mengatur mode hisab, suara azan, pengaturan reminder\n- Penjelasan tentang format dan update database jadwal shalat offline\n- Troubleshooting umum dan FAQ\n\n---\n\n**Format:**\n- Markdown, PDF, atau video jika ada\n\n**Note:**\n- Sertakan f",
+      "url": "https://github.com/tldraw/tldraw/issues/8308",
+      "author": "awanputih",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-22T05:53:46Z",
+      "closed_at": "2026-03-23T09:26:48Z",
+      "days_open": 1.15,
+      "comments": 1,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7375,
+      "title": "Zoom to selection option is not working",
+      "body_preview": "### What happened?\n\nZoom To Selection Option is somehow disabled for the website and does not function as intended\n\n### How can we reproduce the bug?\n\nHover-over the \"Zoom To Selection Option\" as it is not clickable\n\n### What browsers are you seeing the problem on?\n\nChrome\n\n### Where did this happen?\n\nThe tldraw.com website\n\n### Contact Details\n\nsuranjanbiswas2002@gmail.com\n\n### Code of Conduct\n\n- [x] I agree to follow this project's Code of Conduct",
+      "url": "https://github.com/tldraw/tldraw/issues/7375",
+      "author": "Sam44323",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2025-12-13T21:26:14Z",
+      "closed_at": "2026-02-03T16:22:15Z",
+      "days_open": 51.79,
+      "comments": 8,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6713,
+      "title": "SVG with border-radius breaks on Safari",
+      "body_preview": "### What happened?\n\nI have the following css applied globally:\n\n```css\nsvg {\n  border-radius: 4px;\n}\n```\n\nOn safari, this will stop Tldraw from working:\n\n* create selections \n* free-hand drawing\n\nhttps://github.com/user-attachments/assets/eb6a8ea3-5949-4c63-9268-f64f1477a041\n\n### How can we reproduce the bug?\n\nExecute this at the Safari developer console:\n\n```js\nlet s = document.createElement('style');\ns.innerHTML = 'svg { border-radius: 4px; }';\ndocument.head.appendChild(s);\n```\n\nand start draw",
+      "url": "https://github.com/tldraw/tldraw/issues/6713",
+      "author": "movsb",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2025-09-08T22:10:22Z",
+      "closed_at": "2025-09-09T09:31:06Z",
+      "days_open": 0.47,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6644,
+      "title": "Add Hoppscotch embed support",
+      "body_preview": "### What's the feature?\n\nhey, another issue following my work on https://github.com/tldraw/tldraw/issues/6642\n\nI wanted to be able to execute cURLs from tldraw and I found hoppscotch to be really convenient: once you have an account and defined a request in a collection, you can embed an iframe\n\ndiff: https://github.com/xamey/tldraw/pull/2\n\nHere's a video:\n\nhttps://github.com/user-attachments/assets/c16f2870-bac5-422e-b876-a9e909dd9939\n\nlet me know if I can open a PR\n\nthanks\n\n### Where would you",
+      "url": "https://github.com/tldraw/tldraw/issues/6644",
+      "author": "xamey",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [
+        "good first issue"
+      ],
+      "created_at": "2025-08-25T08:41:36Z",
+      "closed_at": "2026-03-28T11:45:32Z",
+      "days_open": 215.13,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6642,
+      "title": "Add Datadog embed support",
+      "body_preview": "### What's the feature?\n\nhey, I wanted to be able to have some datadog embed stuff on an infinite canvas so I gave a try to tldraw and it was quite easy to integrate\nthought it would be interesting to share it to the main branch\n\ndrawbacks compared to others embed :\n- requires a configuration in Datadog in order for a dashboard to be sharable (and limited to a subset of referers, hence the `referrerPolicy` addition in embedInfo definition)\n- there's no way to compute a `fromEmbed` / `toEmbed` as",
+      "url": "https://github.com/tldraw/tldraw/issues/6642",
+      "author": "xamey",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [
+        "good first issue"
+      ],
+      "created_at": "2025-08-25T06:37:58Z",
+      "closed_at": "2026-03-28T11:45:34Z",
+      "days_open": 215.21,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6413,
+      "title": "Unexpected scroll selecting shape color",
+      "body_preview": "### What happened?\n\nWhen I select color, tldraw container moves to top of the page. Issue is caused by this lines of code:\n\nhttps://github.com/tldraw/tldraw/blob/186575457c6964939229170aee14ba3654219417/packages/tldraw/src/lib/ui/components/primitives/TldrawUiButtonPicker.tsx#L72-L74\n\n<img width=\"267\" height=\"397\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f390cba2-eb13-4c26-b49c-0aa9496d23a3\" />\n\n### How can we reproduce the bug?\n\n1. goto: https://examples.tldraw.com/custom-sha",
+      "url": "https://github.com/tldraw/tldraw/issues/6413",
+      "author": "Profesor08",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "sdk"
+      ],
+      "created_at": "2025-07-08T12:10:20Z",
+      "closed_at": "2026-04-12T17:25:10Z",
+      "days_open": 278.22,
+      "comments": 6,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6341,
+      "title": "Cannot enter shape edit mode via double tap on mobile",
+      "body_preview": "### What happened?\n\nNothing happens when I double tap shape on mobile device. This bug occurs only on mobiles, may be explicitly on touch devices.\n\nWhen I test on this example, from docs (https://tldraw.dev/examples/editable-shape), all works fine, but on actual version (tldraw@3.13.3), it not working.\n\n### How can we reproduce the bug?\n\n#### Reproduction\n\n[double-click-bug.zip](https://github.com/user-attachments/files/20959833/double-click-bug.zip)\n\n#### Steps\n\n1. unzip\n2. install dependencies",
+      "url": "https://github.com/tldraw/tldraw/issues/6341",
+      "author": "Profesor08",
+      "author_contrib_count": 2,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-06-28T09:31:08Z",
+      "closed_at": "2026-01-01T00:33:12Z",
+      "days_open": 186.63,
+      "comments": 6,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6321,
+      "title": "Unable to setup default language",
+      "body_preview": "Hi! \ud83d\udc4b \n      \nFirstly, thanks for your work on this project! \ud83d\ude42\n\nToday I used [patch-package](https://github.com/ds300/patch-package) to patch `@tldraw/tlschema@3.13.2` for the project I'm working on.\n\nLanguage selection for website is configured by user, or set by default to match browser language, if posible, with fallback to en. Also it is required to be set to `<html lang=\"en\">` and it is available via `document.documentElement.lang`.\n\nCurrently, tldraw uses browser language `navigator.langua",
+      "url": "https://github.com/tldraw/tldraw/issues/6321",
+      "author": "Profesor08",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "sdk"
+      ],
+      "created_at": "2025-06-25T16:16:51Z",
+      "closed_at": "2026-04-12T17:24:47Z",
+      "days_open": 291.05,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6247,
+      "title": "Images can't be seen on my Chrome browser, but collaborators can see them.",
+      "body_preview": "I encounter a problem on tldraw.  I inserted some images (.png) on tldraw, but I can't see the images, only frames, on Chrome browser.  However, if I share the board with others, they can see those images.  The problem exists even if I changed the browser to Firefox.  I turn on F12, and it shows \" failed to load resource: net::ERR_BLOCKED_By_CLIENT and net : :ERR_CONNECTION_CLOSED.  I've tried any methods searched on the Internet, but it still does not work.  I shot a video and see if anyone can",
+      "url": "https://github.com/tldraw/tldraw/issues/6247",
+      "author": "Olivia444C",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-06-13T09:26:20Z",
+      "closed_at": "2026-01-01T00:33:23Z",
+      "days_open": 201.63,
+      "comments": 4,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6180,
+      "title": "Floating point precision error in editor bounds calculation",
+      "body_preview": "### What happened?\n\nI've identified a floating-point precision error in the `width` and `height` calculations within the methods that determine an Editor's Bounds.\n\nIt appears that methods for calculating bounds, such as `getShapeMaskedPageBounds` (used internally by `editor.toImage`) and the public `getSelectionRotatedPageBounds`, utilize the static method `Box.FromPoints`.\n\nUpon reviewing the `FromPoints` implementation, I found that `width` and `height` are calculated as `maxX - minX`. This c",
+      "url": "https://github.com/tldraw/tldraw/issues/6180",
+      "author": "kwonuj",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-06-04T08:15:53Z",
+      "closed_at": "2026-01-01T00:33:27Z",
+      "days_open": 210.68,
+      "comments": 6,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6170,
+      "title": "Add bezier line support",
+      "body_preview": "### What's the feature?\n\nHi, last days i was playing around tldraw and tldraw computer. i just thought why tldraw does not have bezeir line similar to Reactflow. because tldraw is cool tbh, but we can also add bezeir and maybe will look even more cool to play around (kinda addictive ui/ux stuff). \n\n### Where would you like this feature?\n\nThe developer package\n\n### Contact Details\n\nabdibrokhim@gmail.com\n\n### Code of Conduct\n\n- [x] I agree to follow this project's Code of Conduct",
+      "url": "https://github.com/tldraw/tldraw/issues/6170",
+      "author": "abdibrokhim",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2025-06-03T10:08:40Z",
+      "closed_at": "2025-12-01T00:34:17Z",
+      "days_open": 180.6,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6163,
+      "title": "Imported images double in size when exported as PNG",
+      "body_preview": "### What happened?\n\nWhen I import an image and immediately export it without doing anything else, the image that I imported in the PNG becomes exactly twice the original size and has a 64px black border.\n\nI would have expected no black border, no resizing or upscaling of the output, those should be opt-in features or at least provide users the choice to disable them on the website.\n\n### How can we reproduce the bug?\n\n1. Import an image via clipboard or drag and drop.\n2. Export as PNG.\n\n### What ",
+      "url": "https://github.com/tldraw/tldraw/issues/6163",
+      "author": "0Ky",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-06-01T02:40:03Z",
+      "closed_at": "2026-01-01T00:33:28Z",
+      "days_open": 213.91,
+      "comments": 9,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6161,
+      "title": "Add ability to force color scheme",
+      "body_preview": "### What's the feature?\n\nI would like to move the state of the selected color scheme (light, dark, system) out of tldraw and have it controlled programmatically. As far as I can tell from searching and the typescript types, there's no way to force it in the SDK and therefore the only way to sync with other components is to `inferDarkMode` and have your components do the same.\n\nHappy to open a PR but as per your contributing guidelines I opened this as a discussion first.\n\n### Where would you lik",
+      "url": "https://github.com/tldraw/tldraw/issues/6161",
+      "author": "richardvanbergen",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-31T01:32:09Z",
+      "closed_at": "2025-12-01T00:34:22Z",
+      "days_open": 183.96,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6150,
+      "title": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "body_preview": "After trying to patch the \"all: inset\u201d error by removing, got error:\n\n```js\ngetRootForUpdatedFiber@http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:2455:176\nenqueueConcurrentRenderForLane@http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:2443:38\nforceStoreRerender@http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:3352:50\n@http://localhost:3000/_next/static/ch",
+      "url": "https://github.com/tldraw/tldraw/issues/6150",
+      "author": "brooke-s112",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-29T21:54:03Z",
+      "closed_at": "2025-12-01T00:34:27Z",
+      "days_open": 185.11,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6145,
+      "title": "Add copy button for image without padding",
+      "body_preview": "### What's the feature?\n\n## Feature Request: Add a copy button (to copy image without padding)\n\n- Right now the action: **_Right Click -> Copy As -> PNG_** copies the image with a padding.\n- This image requires further cropping to remove the padding which is a hassle\n\n\nDon't change the current implementation.\n\n- But introduce a copy button on the export page to copy the image without any padding. \n- Also if possible, introduce a keyboard shortcut for this (_Low Priority_)\n\n### Example:\nBelow is ",
+      "url": "https://github.com/tldraw/tldraw/issues/6145",
+      "author": "optymistic",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-29T13:17:20Z",
+      "closed_at": "2026-01-01T00:33:30Z",
+      "days_open": 216.47,
+      "comments": 6,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6141,
+      "title": "Crash when duplicating objects with duplicate fractional index",
+      "body_preview": "### What happened?\n\nWhen two sibling shapes have the same fractional index, `duplicateShapes` crashes:\n\n```\n    at generateKeyBetween (index.js:401:11)\n    at generateJitteredKeyBetween (index.js:416:15)\n    at spreadGeneratorResults (index.js:438:13)\n    at generateNJitteredKeysBetween (index.js:424:10)\n    at getIndexBetween (reordering.ts:79:9)\n    at Editor.ts:5936:19\n    at Array.forEach (<anonymous>)\n    at Editor.ts:5929:32\n    at transact (transactions.ts:299:10)\n    at HistoryManager.ba",
+      "url": "https://github.com/tldraw/tldraw/issues/6141",
+      "author": "rudi-c",
+      "author_contrib_count": 3,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2025-05-28T15:35:07Z",
+      "closed_at": "2026-01-01T00:33:31Z",
+      "days_open": 217.37,
+      "comments": 6,
+      "state_reason": "not_planned"
+    }
+  ],
+  "bucket_B_completed_new_contributor": [
+    {
+      "number": 8577,
+      "title": "\"Get a license for production\" are you joking?",
+      "body_preview": "Youre using public contributions and then asking for money? Is this some kind of practical joke",
+      "url": "https://github.com/tldraw/tldraw/issues/8577",
+      "author": "kkayam",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-16T12:36:48Z",
+      "closed_at": "2026-04-20T14:11:41Z",
+      "days_open": 4.07,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8551,
+      "title": "[Feature Request]: Add support for configurable border radius (rounded corners) for basic shapes",
+      "body_preview": "## Description\nI\u2019d like to request support for configurable border radius (with a reasonable upper limit) for common shapes such as (& not limited to) rectangles, squares, triangles, rhombuses, etc.\n\nCurrently, shapes appear to be rendered with sharp corners only. Adding the ability to control corner rounding would significantly improve flexibility for diagramming and UI/UX-style layouts, where rounded shapes are commonly used.\n\n**Use cases**\n\n* Creating UI mockups and wireframes with rounded co",
+      "url": "https://github.com/tldraw/tldraw/issues/8551",
+      "author": "apexrizzler",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-15T12:05:57Z",
+      "closed_at": "2026-04-15T12:06:11Z",
+      "days_open": 0.0,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8544,
+      "title": "Copy as PNG + paste shapes with cmd+V fails in Chrome 147",
+      "body_preview": "When copying as PNG and pasting with cmd + V, tldraw shapes (even basic ones on tldraw.com), with right click -> Copy as -> PNG in context menu, I get an error, and the shape is not pasted.\n\n<img width=\"485\" height=\"795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8a21d0f0-f3cd-41b5-93e9-7b409b886775\" />\n\n<img width=\"738\" height=\"983\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8557f6ac-3d99-4717-a168-f40a93e029c9\" />\n\nThis error message is from copying a regular ",
+      "url": "https://github.com/tldraw/tldraw/issues/8544",
+      "author": "simon-ardal-adsk",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-14T13:37:22Z",
+      "closed_at": "2026-04-23T10:09:50Z",
+      "days_open": 8.86,
+      "comments": 2,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8514,
+      "title": "Your MCP server ranks in the top 0.1% for reliability out of 20,000+ servers",
+      "body_preview": "tldraw's MCP server has trust score 85/100 and 80.2% uptime \u2014 top 0.1% of 20,000+ MCP servers we monitor on YellowMCP (https://yellowmcp.com/servers/io-github-tldraw-tldraw).\n\nYour stats:\n\n- Trust Score: 85/100\n- Uptime (30d): 80.2%\n- Stars: 46,260\n- Status: Up\n\nLive badge for your README:\n\n[![YellowMCP](https://yellowmcp.com/api/v1/servers/io-github-tldraw-tldraw/badge)](https://yellowmcp.com/servers/io-github-tldraw-tldraw)\n\nClaim your listing: https://yellowmcp.com/servers/io-github-tldraw-tl",
+      "url": "https://github.com/tldraw/tldraw/issues/8514",
+      "author": "avib99",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-10T06:50:30Z",
+      "closed_at": "2026-04-10T08:27:34Z",
+      "days_open": 0.07,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8456,
+      "title": "ShapeUtil.isAspectRatioLocked() signature missing shape parameter in implementations",
+      "body_preview": "There's a signature mismatch with `isAspectRatioLocked()` \u2014 the base class declares a `shape` parameter, it gets passed at the call site, but most implementations don't accept it. Probably worth aligning these.\n\n## What's going on\n\n**Base class (ShapeUtil.ts:491):**\n```typescript\nisAspectRatioLocked(shape: Shape): boolean {\n  return false\n}\n```\n\n**Call site (Resizing.ts:534):**\n```typescript\nisAspectRatioLocked: util.isAspectRatioLocked(shape),\n```\n\n**Out of sync:**\n- `ImageShapeUtil.tsx:81` \u2014 `",
+      "url": "https://github.com/tldraw/tldraw/issues/8456",
+      "author": "jubalm",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "sdk"
+      ],
+      "created_at": "2026-04-05T02:14:39Z",
+      "closed_at": "2026-04-13T21:38:09Z",
+      "days_open": 8.81,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8430,
+      "title": "fix(editor): remove window.__tldraw__hardReset global \u2014 causes memory retention",
+      "body_preview": "Hi folks I have a patch prepared for this memory leak within __tldraw that is causing memory leaks.\n\nPatch: https://github.com/tldraw/tldraw/compare/main...stewartmcgown:tldraw:main\n\n`hardReset.ts` unconditionally assigns the `hardReset` function to `window.__tldraw__hardReset` at module load time:\n\nThis is causing TLDraw to leak memory after unmount in our production app.\n\nConfirmed with a heap snapshot:\n```\nWindow.__tldraw__hardReset\n  -> hardReset closure\n    -> module scope context (3,700+ e",
+      "url": "https://github.com/tldraw/tldraw/issues/8430",
+      "author": "stewartmcgown",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-03T06:21:17Z",
+      "closed_at": "2026-04-03T16:55:18Z",
+      "days_open": 0.44,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8428,
+      "title": "Exported PNG shows blank content on tldraw.com",
+      "body_preview": "Used https://www.tldraw.com/, created some content and selected \u2018Export\u2019 > \u2018PNG\u2019 from the menu.\n\nI would expect this to result in an image file containing my content.\n\nHowever, I always end up with the following view when I open the exported file from my desktop.\n\n<img width=\"2087\" height=\"1658\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f7a806d8-5a97-4734-8ec0-8ba8dc9318c0\" />",
+      "url": "https://github.com/tldraw/tldraw/issues/8428",
+      "author": "sudwhiwdh",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "dotcom"
+      ],
+      "created_at": "2026-04-02T21:55:45Z",
+      "closed_at": "2026-04-05T12:49:15Z",
+      "days_open": 2.62,
+      "comments": 4,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8426,
+      "title": "Canvas fails to load after update on tldraw.com",
+      "body_preview": "##Canvas loading after update\n\nCanvas are unable to load after update.\n\nhttps://github.com/user-attachments/assets/564d3342-ae51-40cd-8d2c-ddb231ca30dc",
+      "url": "https://github.com/tldraw/tldraw/issues/8426",
+      "author": "earavichandran",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "dotcom"
+      ],
+      "created_at": "2026-04-02T15:28:24Z",
+      "closed_at": "2026-04-05T12:49:11Z",
+      "days_open": 2.89,
+      "comments": 2,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8411,
+      "title": "Images don't display despite being recognized on tldraw.com",
+      "body_preview": "<img width=\"1920\" height=\"1080\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0b58d294-b756-4eb6-a4f2-13d3784fca0f\" />\n<img width=\"1920\" height=\"1080\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/b8dc6bd1-f519-489b-85c9-e749e026f7d7\" />",
+      "url": "https://github.com/tldraw/tldraw/issues/8411",
+      "author": "alliebabayaga",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "dotcom"
+      ],
+      "created_at": "2026-04-01T20:08:05Z",
+      "closed_at": "2026-04-05T12:49:13Z",
+      "days_open": 3.7,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8395,
+      "title": "Improve highlight text contrast in dark mode for color blind users",
+      "body_preview": "In regards to [HOTFIX] Apply Granola color palette to tldraw.com#8394\n\n**Description:**\nSince the introduction of the new Granola colour palette, the highlight text feature in dark mode has become difficult to see, particularly for users with colour blindness.\n\nPreviously, I used tldraw daily in dark mode as a to-do list. A key part of my workflow was highlighting completed items using the highlighter tool, which displayed as a bright yellow and was clearly visible against the dark background.\n\n",
+      "url": "https://github.com/tldraw/tldraw/issues/8395",
+      "author": "ORead6",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-04-01T08:11:25Z",
+      "closed_at": "2026-04-01T16:54:18Z",
+      "days_open": 0.36,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8375,
+      "title": "Add a description to improve Dispatch discoverability",
+      "body_preview": "Hi! Your Claude Code skill `update-release-notes` has been discovered by [Dispatch](https://dispatch.visionairy.biz) \u2014 a Claude Code runtime that proactively recommends tools at task shifts and intercepts when Claude picks something suboptimal \u2014 helping developers discover the best plugins, skills, and MCPs for what they're working on.\n\nRight now your skill has no description, which limits how effectively Dispatch can recommend it. A short 1\u20132 sentence description of what your skill does would s",
+      "url": "https://github.com/tldraw/tldraw/issues/8375",
+      "author": "VisionAIrySE",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-29T23:10:23Z",
+      "closed_at": "2026-04-05T12:47:39Z",
+      "days_open": 6.57,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8338,
+      "title": "issue #8324",
+      "body_preview": "Problem\nSDK users calling editor.createBindings() directly can accidentally create multiple bindings with the same (fromId, toId, type) tuple. This was silently tolerated in older versions (up to 4.3) but now causes broken behavior \u2014 particularly for arrow bindings where duplicate terminals lead to rendering issues.\n\nDiagnosing this is difficult because tldraw gives no feedback when duplicates are created. The arrowBindingsCache uses .find() which silently picks the first match per terminal, mas",
+      "url": "https://github.com/tldraw/tldraw/issues/8338",
+      "author": "Valley-15",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-25T10:37:15Z",
+      "closed_at": "2026-03-25T10:37:29Z",
+      "days_open": 0.0,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8295,
+      "title": "feat: add block-no-verify PreToolUse hook to .claude/settings.json",
+      "body_preview": "## Add `block-no-verify` to prevent agents from bypassing git hooks\n\n**Problem**\n\n`.claude/settings.json` currently configures permissions and a `Stop` hook for Prettier formatting, but does not include a `PreToolUse` hook to prevent AI agents from running `git commit` or `git push` with the hook-bypass flag. When an agent uses this flag, it silently skips pre-commit, commit-msg, and pre-push hooks \u2014 defeating linting, formatting, and test-before-commit checks entirely.\n\n**Solution**\n\nAdd [`bloc",
+      "url": "https://github.com/tldraw/tldraw/issues/8295",
+      "author": "tupe12334",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-19T20:20:12Z",
+      "closed_at": "2026-03-30T23:33:37Z",
+      "days_open": 11.13,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8248,
+      "title": "Clarification: Using tldraw components in LGPL\u2011licensed project (PrivateBoard)",
+      "body_preview": "Hello tldraw team,\n\nI'm developing a project called **PrivateBoard** \u2014 a private whiteboard solution for internal corporate use with authentication. The project uses tldraw components as a library.\n\n**Project details:**\n* **Name:** PrivateBoard\n* **GitHub:** https://github.com/lexasub/PrivateBoard\n* **License:** LGPL\u20113.0 (for my code)\n* **tldraw usage:** imported as npm dependency (`@tldraw/tldraw`)\n* **Deployment:** intended for internal/corporate use only (not public SaaS)\n* **Goal:** ensure f",
+      "url": "https://github.com/tldraw/tldraw/issues/8248",
+      "author": "lexasub",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-16T18:25:33Z",
+      "closed_at": "2026-03-17T16:56:00Z",
+      "days_open": 0.94,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8190,
+      "title": "Arrow with Text and of length 0 causes render failure",
+      "body_preview": "# Description\nhaving a Arc arrow, that has some text, between two boxes that touch causes the canvas to become blank. there is no way for the user to recover this situation (exept for modifying the json by hand). changing the Arc arrow to an Elbow arrow will recover the whiteboard to render it's content again.\n\n# reproduction steps\n1. create a new tldraw whiteboard\n2. activate snaping\n3. create a box\n4. create a second box\n5. create an arrow between the two boxes (make shure it is a arc arrow)\n6",
+      "url": "https://github.com/tldraw/tldraw/issues/8190",
+      "author": "Assertores",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-09T19:21:02Z",
+      "closed_at": "2026-03-31T11:22:05Z",
+      "days_open": 21.67,
+      "comments": 3,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8173,
+      "title": "[Example Request]:",
+      "body_preview": "",
+      "url": "https://github.com/tldraw/tldraw/issues/8173",
+      "author": "HenryGerar",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-06T16:04:33Z",
+      "closed_at": "2026-03-06T16:04:48Z",
+      "days_open": 0.0,
+      "comments": 0,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8156,
+      "title": "Lock icon not visible on hover for locked shapes",
+      "body_preview": "Hello\n\nSorry if this is not the right place, by using the tool on tldraw.com, when I lock shapes or group I struggle a lot to _unlock them_. I can't select them anymore.\n\nThe docs say\n```\nLocking in the UI\nIn the default tldraw UI, users can lock shapes through the context menu or the keyboard shortcut (Shift+L). Locked shapes display a lock indicator when hovered, and the context menu shows an unlock option.\"\n```\nBut I don't see anything on hover, and I can't select any shape so I can't access ",
+      "url": "https://github.com/tldraw/tldraw/issues/8156",
+      "author": "buondevid",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [
+        "bugfix",
+        "dotcom"
+      ],
+      "created_at": "2026-03-05T08:14:43Z",
+      "closed_at": "2026-04-05T13:40:05Z",
+      "days_open": 31.23,
+      "comments": 1,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8152,
+      "title": "ImageShape: alt text is missing",
+      "body_preview": "In `ImageShape` there are 2 different images rendered: one with alt text support and the other without. Is there any reason why loaded src is rendered with empty alt https://github.com/tldraw/tldraw/blob/main/packages/tldraw/src/lib/shapes/image/ImageShapeUtil.tsx#L443?",
+      "url": "https://github.com/tldraw/tldraw/issues/8152",
+      "author": "Pareder",
+      "author_contrib_count": 0,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-04T18:28:41Z",
+      "closed_at": "2026-03-05T10:54:33Z",
+      "days_open": 0.68,
+      "comments": 2,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8142,
+      "title": "Pinch-to-zoom not working in Firefox with touch screen",
+      "body_preview": "I noticed that pinch-to-zoom not working in the following setup:\n- OS: Arch Linux\n- DE: KDE Wayland 6.6\n- Browser: Firefox 148.0\n- Input: touch screen monitor\n\nMeanwhile this gesture works in:\n- Excalidraw in the same browser\n- Using trackpad instead of touch screen\n- tldraw run in Chrome or Obsidian (Electron)",
+      "url": "https://github.com/tldraw/tldraw/issues/8142",
+      "author": "Igorgro",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-03T20:11:54Z",
+      "closed_at": "2026-04-02T11:29:15Z",
+      "days_open": 29.64,
+      "comments": 2,
+      "state_reason": "completed"
+    },
+    {
+      "number": 8141,
+      "title": "Debug svg mode - Content Security Policy problem",
+      "body_preview": "## Summary\n\nIn **Debug svg mode**, an iframe is created with a `data:image/svg+xml;utf8,...` URL, but it gets blocked by the site\u2019s Content Security Policy. The svg is not visible.\n\nConsole error:\n\n> Framing '' violates the following Content Security Policy directive: `frame-src 'self' https:`. The request has been blocked.\n\n## Steps to reproduce\n\n1. Open https://tldraw.com\n2. Enable **Debug SVG mode**\n3. Observe console + missing/blocked debug SVG rendering\n\n## Expected behavior\n\nDebug SVG mode",
+      "url": "https://github.com/tldraw/tldraw/issues/8141",
+      "author": "noreng",
+      "author_contrib_count": 1,
+      "is_new_contributor": true,
+      "labels": [],
+      "created_at": "2026-03-03T19:23:26Z",
+      "closed_at": "2026-03-04T16:49:50Z",
+      "days_open": 0.89,
+      "comments": 1,
+      "state_reason": "completed"
+    }
+  ],
+  "bucket_C_not_planned_regular_contributor": [
+    {
+      "number": 8539,
+      "title": "Defer image loading while zooming",
+      "body_preview": "## Problem\n\nWhen zooming the canvas, tldraw resolves and loads images at new resolutions during the zoom operation. This can cause unnecessary network requests and rendering work while the user is actively zooming, especially on canvases with many images.\n\nCurrently, the `useImageOrVideoAsset` hook debounces URL *resolution* by 500ms during zoom, but the actual image loading (fetch + decode + render) still happens during zoom. When zooming through multiple resolution thresholds quickly, this can",
+      "url": "https://github.com/tldraw/tldraw/issues/8539",
+      "author": "steveruizok",
+      "author_contrib_count": 1985,
+      "is_new_contributor": false,
+      "labels": [
+        "performance",
+        "feature",
+        "sdk"
+      ],
+      "created_at": "2026-04-14T09:26:52Z",
+      "closed_at": "2026-04-15T15:16:07Z",
+      "days_open": 1.24,
+      "comments": 2,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7983,
+      "title": "Add Angular template and integration documentation",
+      "body_preview": "## Problem statement\n\nTeams using Angular cannot easily integrate tldraw into their applications. While a Vue template exists in the monorepo, there is no Angular equivalent, and the documentation is entirely React-focused with no guidance for Angular developers.\n\n## Proposed solution\n\nAdd an Angular template and comprehensive documentation:\n\n### 1. Angular template (`templates/angular/`)\n\nA complete Angular 19 application demonstrating:\n- Mounting tldraw's React component inside Angular's lifec",
+      "url": "https://github.com/tldraw/tldraw/issues/7983",
+      "author": "angrycaptain19",
+      "author_contrib_count": 4,
+      "is_new_contributor": false,
+      "labels": [
+        "docs",
+        "sdk"
+      ],
+      "created_at": "2026-02-17T13:41:54Z",
+      "closed_at": "2026-02-17T13:44:40Z",
+      "days_open": 0.0,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7964,
+      "title": "Search examples by description text, not just titles and keywords",
+      "body_preview": "## Problem\n\nThe examples app filter (`apps/examples/src/ExamplePage.tsx`) only matches against `title` and `keywords`:\n\n```ts\nterms.some((term) => example.title.toLowerCase().includes(term)) ||\nexample.keywords.some((keyword) =>\n  terms.some((term) => keyword.toLowerCase().includes(term))\n)\n```\n\nA user searching for \"arrow\" won't find examples that discuss arrows in their description but don't have \"arrow\" as an explicit keyword.\n\n## Proposal\n\nInclude the one-line description in the filter match",
+      "url": "https://github.com/tldraw/tldraw/issues/7964",
+      "author": "steveruizok",
+      "author_contrib_count": 1805,
+      "is_new_contributor": false,
+      "labels": [
+        "examples"
+      ],
+      "created_at": "2026-02-16T08:33:40Z",
+      "closed_at": "2026-02-19T13:54:22Z",
+      "days_open": 3.22,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7963,
+      "title": "Add category descriptions to the examples sidebar",
+      "body_preview": "## Problem\n\nThe 10 example categories are well-organized, but they're just labels. A developer new to tldraw scanning the sidebar doesn't know whether to look in \"Editor API\" or \"Events & effects\" for what they need.\n\nCurrently, categories are defined as simple string tuples in `apps/examples/src/examples.tsx`:\n\n```ts\nconst categories = [\n  ['getting-started', 'Getting started'],\n  ['configuration', 'Configuration'],\n  ['editor-api', 'Editor API'],\n  // ...\n] as const\n```\n\n## Proposal\n\nAdd a bri",
+      "url": "https://github.com/tldraw/tldraw/issues/7963",
+      "author": "steveruizok",
+      "author_contrib_count": 1805,
+      "is_new_contributor": false,
+      "labels": [
+        "examples",
+        "sdk"
+      ],
+      "created_at": "2026-02-16T08:33:30Z",
+      "closed_at": "2026-02-19T13:54:22Z",
+      "days_open": 3.22,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7962,
+      "title": "Add related examples linking in the examples app",
+      "body_preview": "## Problem\n\nThere's no way to navigate laterally between related concepts. If a user is reading \"Custom shape\" they might want \"Custom shape with handles\" or \"Shape with bindings\" next, but nothing connects them. The only navigation is the flat category list in the sidebar.\n\n## Proposal\n\nAdd a way to link related examples so users can follow learning paths:\n\n1. **Add a `related` field to README frontmatter:**\n   ```yaml\n   ---\n   title: Custom shape\n   component: ./CustomShapeExample.tsx\n   rela",
+      "url": "https://github.com/tldraw/tldraw/issues/7962",
+      "author": "steveruizok",
+      "author_contrib_count": 1805,
+      "is_new_contributor": false,
+      "labels": [
+        "examples",
+        "sdk"
+      ],
+      "created_at": "2026-02-16T08:33:21Z",
+      "closed_at": "2026-02-19T13:54:21Z",
+      "days_open": 3.22,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7961,
+      "title": "Surface example descriptions instead of hiding them behind a dialog",
+      "body_preview": "## Problem\n\nThe description for each example is locked behind a tiny (i) button that only appears on the *active* sidebar item. A user landing on an example has no context for what they're looking at unless they discover and click that icon.\n\nThe info dialog uses a Radix AlertDialog (`apps/examples/src/ExamplePage.tsx`) and lazy-loads content via `loadContent()`, but none of this is visible by default.\n\n## Proposal\n\nShow at least the one-line summary (the text before the `---` separator in each ",
+      "url": "https://github.com/tldraw/tldraw/issues/7961",
+      "author": "steveruizok",
+      "author_contrib_count": 1805,
+      "is_new_contributor": false,
+      "labels": [
+        "examples"
+      ],
+      "created_at": "2026-02-16T08:33:11Z",
+      "closed_at": "2026-02-19T13:54:21Z",
+      "days_open": 3.22,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7960,
+      "title": "Add inline source code viewer to examples app",
+      "body_preview": "## Problem\n\nThe examples app renders live demos well, but the source code \u2014 the thing users actually want to learn from \u2014 is invisible. Users have to click \"View Source\" and navigate to GitHub to see the code. An examples app where you can't see the code is like a cookbook where you can only see photos of the food.\n\n## Proposal\n\nAdd a split-pane or tab view that shows the example's source files alongside the live canvas.\n\n**Implementation ideas:**\n- The Vite plugin (`exampleReadmePlugin` in `app",
+      "url": "https://github.com/tldraw/tldraw/issues/7960",
+      "author": "steveruizok",
+      "author_contrib_count": 1805,
+      "is_new_contributor": false,
+      "labels": [
+        "examples",
+        "sdk"
+      ],
+      "created_at": "2026-02-16T08:33:00Z",
+      "closed_at": "2026-02-19T13:54:20Z",
+      "days_open": 3.22,
+      "comments": 0,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 7446,
+      "title": "Stack and pack shapes example",
+      "body_preview": "## Summary\n\nCreate an example demonstrating how to programmatically stack and pack shapes for automated layout using the editor API.\n\n## What should be demonstrated\n\nA focused example showing:\n\n1. **Stacking operations**: How to use `editor.stackShapes()` to arrange shapes in sequence:\n   - Horizontal stacking with consistent gaps\n   - Vertical stacking with consistent gaps\n   - Custom gap specification vs automatic gap detection\n\n2. **Packing operations**: How to use `editor.packShapes()` to ar",
+      "url": "https://github.com/tldraw/tldraw/issues/7446",
+      "author": "steveruizok",
+      "author_contrib_count": 1552,
+      "is_new_contributor": false,
+      "labels": [
+        "good first issue"
+      ],
+      "created_at": "2025-12-25T16:37:39Z",
+      "closed_at": "2026-03-28T11:45:07Z",
+      "days_open": 92.8,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6312,
+      "title": "VS Code extension cannot be installed in Cursor",
+      "body_preview": "### What happened?\n\nYou can't install Tldraw in Cursor. \n<video src=\"https://github.com/user-attachments/assets/f896b94c-63d4-46ad-a75e-ab22fd46e20d\"/>\n\n### How can we reproduce the bug?\n\n1. Open cursor\n2. Go to the extensions tab\n3. Search for tldraw\n4. Result: No tldraw in the search results.\n\n### What browsers are you seeing the problem on?\n\n_No response_\n\n### Where did this happen?\n\nThe developer package\n\n### Contact Details\n\n_No response_\n\n### Code of Conduct\n\n- [x] I agree to follow this p",
+      "url": "https://github.com/tldraw/tldraw/issues/6312",
+      "author": "seflless",
+      "author_contrib_count": 19,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-06-24T12:09:26Z",
+      "closed_at": "2026-01-01T00:33:17Z",
+      "days_open": 190.52,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6147,
+      "title": "Add dynamic page export to images",
+      "body_preview": "### What's the feature?\n\nCurrently, when we export a page from tldraw, it exports images based on the position of the elements.\nWhat if I want to export some of it? What if I want to add or remove the default padding?\nIt can cover a wider range of situations than just selecting a few elements.\n\n1. When selecting Export, a modal will pop up.\n2. Show user a preview. Inside it is an adjustable rectangle, this rectangle is basically the image area that tldraw exports.\n3. Manipulate the rectangle to ",
+      "url": "https://github.com/tldraw/tldraw/issues/6147",
+      "author": "nayounsang",
+      "author_contrib_count": 22,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-29T15:04:14Z",
+      "closed_at": "2025-12-01T00:34:29Z",
+      "days_open": 185.4,
+      "comments": 4,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6095,
+      "title": "Border misaligned when selected in Edge browser",
+      "body_preview": "### What happened?\n\nThe border is misaligned when selected in the edge browser\n\n![Image](https://github.com/user-attachments/assets/0a7eeccc-cc3e-43a1-bcc8-0c75a402aa62)\n\n\n### How can we reproduce the bug?\n\n_No response_\n\n### What browsers are you seeing the problem on?\n\n_No response_\n\n### Where did this happen?\n\nThe developer package\n\n### Contact Details\n\n_No response_\n\n### Code of Conduct\n\n- [x] I agree to follow this project's Code of Conduct",
+      "url": "https://github.com/tldraw/tldraw/issues/6095",
+      "author": "yi-boide",
+      "author_contrib_count": 13,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-20T02:28:38Z",
+      "closed_at": "2025-12-01T00:34:34Z",
+      "days_open": 194.92,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6078,
+      "title": "sync error: INVALID_RECORD",
+      "body_preview": "Hey, I ran into an error while using tldraw:\n\n```js\nRemoteSyncError: sync error: INVALID_RECORD\n    at Object.onSyncError (http://localhost:5174/node_modules/.vite/deps/@tldraw_sync.js?v=68a7df00:2544:27)\n    at http://localhost:5174/node_modules/.vite/deps/@tldraw_sync.js?v=68a7df00:538:20\n    at http://localhost:5174/node_modules/.vite/deps/@tldraw_sync.js?v=68a7df00:877:17\n    at Set.forEach (<anonymous>)\n    at ClientWebSocketAdapter._handleDisconnect (http://localhost:5174/node_modules/.vit",
+      "url": "https://github.com/tldraw/tldraw/issues/6078",
+      "author": "yi-boide",
+      "author_contrib_count": 12,
+      "is_new_contributor": false,
+      "labels": [
+        "More Info Needed",
+        "stale"
+      ],
+      "created_at": "2025-05-16T08:59:15Z",
+      "closed_at": "2025-12-01T00:34:42Z",
+      "days_open": 198.65,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6068,
+      "title": "Elbow arrows break at high scale",
+      "body_preview": "### What happened?\n\n<img width=\"760\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f8249530-f397-41a8-98fb-a544d401448c\" />\n\n### How can we reproduce the bug?\n\nTurn on dynamic size.\nZoom out.\nConnect two shapes with an elbow arrow.\n\n### What browsers are you seeing the problem on?\n\n_No response_\n\n### Where did this happen?\n\nThe developer package\n\n### Contact Details\n\n_No response_\n\n### Code of Conduct\n\n- [x] I agree to follow this project's Code of Conduct",
+      "url": "https://github.com/tldraw/tldraw/issues/6068",
+      "author": "steveruizok",
+      "author_contrib_count": 1258,
+      "is_new_contributor": false,
+      "labels": [],
+      "created_at": "2025-05-13T11:38:21Z",
+      "closed_at": "2025-12-01T00:34:44Z",
+      "days_open": 201.54,
+      "comments": 4,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6063,
+      "title": "WebSocket connection repeatedly reconnects",
+      "body_preview": "### What happened?\n\nIt jumped from other pages to the canvas page with roomId. There was a problem with the ws connection, and the server kept indicating that the connection was successful. To close the connection, this operation was repeated. Only by refreshing the page again could it be displayed normally\n\n<img width=\"1427\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/757acaa9-4bb1-4a1d-b831-4f6f11eb4ee0\" />\n\n<img width=\"639\" alt=\"Image\" src=\"https://github.com/user-attachments/",
+      "url": "https://github.com/tldraw/tldraw/issues/6063",
+      "author": "yi-boide",
+      "author_contrib_count": 10,
+      "is_new_contributor": false,
+      "labels": [
+        "More Info Needed",
+        "stale"
+      ],
+      "created_at": "2025-05-13T07:57:21Z",
+      "closed_at": "2025-12-01T00:34:47Z",
+      "days_open": 201.69,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6054,
+      "title": "Make eraser work on pixel basis",
+      "body_preview": "### What's the feature?\n\nIt would be great to have the current eraser which erases full shapes or hand drawn lines, but in addition also have pixel erase, to allow the eraser to remove parts of shapes or parts of hand drawn lines.\n\nA bit more info here https://discord.com/channels/859816885297741824/1336716649788739756/1370092279380967494\n\n### Where would you like this feature?\n\nThe tldraw.com website\n\n### Contact Details\n\n_No response_\n\n### Code of Conduct\n\n- [x] I agree to follow this project'",
+      "url": "https://github.com/tldraw/tldraw/issues/6054",
+      "author": "MitjaBezensek",
+      "author_contrib_count": 506,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-12T12:16:10Z",
+      "closed_at": "2025-12-01T00:34:50Z",
+      "days_open": 202.51,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 6011,
+      "title": "Stuck in selecting state when pointer over UI",
+      "body_preview": "### What happened?\n\nRaising my pointer over the opacity slider (while the pointer is moving) causes me to get stuck with a selection box, even though my pointer is up.\n\n![Image](https://github.com/user-attachments/assets/4249c118-eed5-42ce-83dc-9f45e02ddbe5)\n\n### How can we reproduce the bug?\n\n1. Drag a selection box on the canvas.\n2. Drag the pointer over the opacity slider.\n3. While moving the pointer slightly, raise the pointer up.\n\nExpected: The selection box disappears.\nActual: The selectio",
+      "url": "https://github.com/tldraw/tldraw/issues/6011",
+      "author": "TodePond",
+      "author_contrib_count": 320,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-05-06T11:11:15Z",
+      "closed_at": "2025-12-01T00:34:53Z",
+      "days_open": 208.56,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 5963,
+      "title": "Arrow shape cannot be placed at bottom",
+      "body_preview": "### What happened?\n\nThe arrow shape cannot be placed at the bottom\n\nCall the API for setting the bottom, hoping it can be set to the bottom normally\n\n### How can we reproduce the bug?\n\n\nAfter selecting \"arrow shape\", open the right-click menu and select \"Bottom\", but there is no effect at all\n\n### What browsers are you seeing the problem on?\n\n_No response_\n\n### Where did this happen?\n\nThe developer package\n\n### Contact Details\n\n_No response_\n\n### Code of Conduct\n\n- [x] I agree to follow this pro",
+      "url": "https://github.com/tldraw/tldraw/issues/5963",
+      "author": "yi-boide",
+      "author_contrib_count": 9,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-04-27T10:55:55Z",
+      "closed_at": "2025-11-01T00:29:24Z",
+      "days_open": 187.56,
+      "comments": 5,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 5944,
+      "title": "rich text: be able to turn on read-only TipTap for certain use cases",
+      "body_preview": "### What's the feature?\n\nDiscussion on https://discord.com/channels/859816885297741824/1362832338282614784/1362832338282614784\n\n> The current implementation renders rich text HTML within a div when a shape is not in edit mode, and a Tiptap instance is not instantiated in this scenario. Consequently, editor commands cannot be executed unless the shape is being actively edited. This restricts functionalities such as in-content text search.\n\n> We have used Tiptap in one of the custom shape for edit",
+      "url": "https://github.com/tldraw/tldraw/issues/5944",
+      "author": "mimecuvalo",
+      "author_contrib_count": 524,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-04-23T09:56:07Z",
+      "closed_at": "2025-11-01T00:29:32Z",
+      "days_open": 191.61,
+      "comments": 3,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 5930,
+      "title": "Region zoom behavior is incorrect",
+      "body_preview": "### What happened?\n\nI'm not sure what it's internally called. But when you press the **Z** key, Tldraw goes into a mode where you can click drag a region and it will zoom to that. Let's call it \"region-zoom\" for now. \n\nA few things that are off:\n1. You can press z, but it's not included in the keyboards dialog\n2. When you first use it, it stays in a mode where click dragging zooms in\n3. Pressing escape doesn't return you to select mode (like other tools do)\n4. Once you've used it once, manually ",
+      "url": "https://github.com/tldraw/tldraw/issues/5930",
+      "author": "seflless",
+      "author_contrib_count": 16,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-04-18T14:09:37Z",
+      "closed_at": "2025-12-01T00:34:56Z",
+      "days_open": 226.43,
+      "comments": 8,
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 5929,
+      "title": "Add forced read-only state support to editor.run",
+      "body_preview": "### What's the feature?\n\nIt is hoped that the editor.run method will add support for forced read-only state changes\n\n### Where would you like this feature?\n\nThe developer package\n\n### Contact Details\n\n_No response_\n\n### Code of Conduct\n\n- [x] I agree to follow this project's Code of Conduct",
+      "url": "https://github.com/tldraw/tldraw/issues/5929",
+      "author": "yi-boide",
+      "author_contrib_count": 8,
+      "is_new_contributor": false,
+      "labels": [
+        "stale"
+      ],
+      "created_at": "2025-04-18T03:00:11Z",
+      "closed_at": "2025-11-01T00:29:37Z",
+      "days_open": 196.9,
+      "comments": 8,
+      "state_reason": "not_planned"
+    }
+  ]
+}

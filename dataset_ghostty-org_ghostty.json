@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "repository": "ghostty-org/ghostty",
+    "description": "Final benchmark dataset: 5 issues per category, holistically reviewed",
+    "categories": {
+      "cat1_new_slop": "New contributor (\u22643 prior contribs at filing) + slop (AI-generated/spam/off-topic/low-quality)",
+      "cat2_new_not_planned": "New contributor + legitimate issue closed as not-planned",
+      "cat3_new_worked_upon": "New contributor + issue actually worked upon by maintainers",
+      "cat4_regular_slop": "Regular contributor (>3 prior contribs) + slop"
+    }
+  },
+  "cat1_new_slop": [
+    {
+      "issue_number": 10584,
+      "title": "Feature Request: Session Management with Better Default Undo/Restore UX",
+      "author": "Supersynergy",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/10584",
+      "review_notes": "AI-written (Claude Code), maintainer explicitly called out AI irresponsibility"
+    },
+    {
+      "issue_number": 8326,
+      "title": "Feature Request: Quick Terminal-Specific Initial Command Configuration",
+      "author": "risenowrise",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/8326",
+      "review_notes": "AI-written footer (Claude Code), filed as issue violating policy"
+    },
+    {
+      "issue_number": 8199,
+      "title": "missing emojis",
+      "author": "chen1plus",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/8199",
+      "review_notes": "Terse vague emoji request, filed as issue violating policy"
+    },
+    {
+      "issue_number": 8159,
+      "title": "Feature Request: Cursor Phase Fade Animation (Smooth Fade In/Out)",
+      "author": "tim-x-y-z",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/8159",
+      "review_notes": "Overly detailed AI-style markdown for trivial feature; filed as issue violating policy"
+    },
+    {
+      "issue_number": 7622,
+      "title": "PHI-254: Implement Streaming Module in Ghostty Fork",
+      "author": "plarson",
+      "author_prior_contribs": 0,
+      "comments": 2,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/7622",
+      "review_notes": "Wrong repo/task tracker (Apple TV PHI-254), maintainer closed with 'What.'"
+    }
+  ],
+  "cat2_new_not_planned": [
+    {
+      "issue_number": 12565,
+      "title": "Add minimap support for terminal content",
+      "author": "Deutschkiller",
+      "author_prior_contribs": 0,
+      "comments": 2,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/12565",
+      "review_notes": "Reasonable minimap feature request, auto-closed by bot"
+    },
+    {
+      "issue_number": 12556,
+      "title": "Feature: Declarative workspace management via +split and +close CLI actions",
+      "author": "dzearing",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/12556",
+      "review_notes": "Detailed IPC workspace management proposal with PoC code"
+    },
+    {
+      "issue_number": 12554,
+      "title": "SIGSEGV at startup on Fedora 44: bundled fontconfig + glycin SVG icon loader",
+      "author": "Jarbowsky",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/12554",
+      "review_notes": "Real crash bug with detailed fontconfig analysis"
+    },
+    {
+      "issue_number": 12541,
+      "title": "macOS: Korean IME \u2014 first Hangul-composing key after IME switch is committed as decomposed jamo (regression in 1.3.x)",
+      "author": "MorgenGeluk",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/12541",
+      "review_notes": "Legitimate IME regression with comprehensive reproduction steps"
+    },
+    {
+      "issue_number": 12539,
+      "title": "Line selection with Shift + End or Shift + Home not working on micro or nano #4491",
+      "author": "Fabus1184",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/12539",
+      "review_notes": "Real keyboard input issue verified across multiple terminals"
+    }
+  ],
+  "cat3_new_worked_upon": [
+    {
+      "issue_number": 11592,
+      "title": "macOS: Add pid and tty properties to AppleScript terminal class",
+      "author": "TweedBeetle",
+      "author_prior_contribs": 1,
+      "comments": 0,
+      "days_open": 34.2,
+      "url": "https://github.com/ghostty-org/ghostty/issues/11592",
+      "review_notes": "AppleScript API enhancement merged in 1.4.0"
+    },
+    {
+      "issue_number": 11175,
+      "title": "GTK: Drag-and-drop from Nautilus fails because DropTarget only accepts copy, not move",
+      "author": "douglas",
+      "author_prior_contribs": 0,
+      "comments": 6,
+      "days_open": 0.2,
+      "url": "https://github.com/ghostty-org/ghostty/issues/11175",
+      "review_notes": "Real GTK DnD bug fixed by pluiedev"
+    },
+    {
+      "issue_number": 10864,
+      "title": "macOS: cmd-click fails to open file paths containing tilde (~)",
+      "author": "AlexFeijoo44",
+      "author_prior_contribs": 1,
+      "comments": 2,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/10864",
+      "review_notes": "Tilde expansion bug in URL handling, contributor fix"
+    },
+    {
+      "issue_number": 10613,
+      "title": "Ubuntu 25.10: Middle-click paste does not work when the GTK scrollbar feature is enabled",
+      "author": "hakonhagland",
+      "author_prior_contribs": 1,
+      "comments": 1,
+      "days_open": 0.01,
+      "url": "https://github.com/ghostty-org/ghostty/issues/10613",
+      "review_notes": "GTK scrollbar event handling bug fixed by rhodes-b"
+    },
+    {
+      "issue_number": 10452,
+      "title": "write_scrollback_file exports with trailing spaces and blank lines",
+      "author": "bog-dance",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/10452",
+      "review_notes": "Real bug in write_scrollback_file addressed"
+    }
+  ],
+  "cat4_regular_slop": [
+    {
+      "issue_number": 7667,
+      "title": "Issue : Missing Error Handling for `os.environ` Access",
+      "author": "PrinceSajjadHussain",
+      "author_prior_contribs": 4,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/7667",
+      "review_notes": "AI-generated generic error handling suggestion; user blocked for spam"
+    },
+    {
+      "issue_number": 7666,
+      "title": "Issue 1: Missing Error Handling in `update_appcast_tag.py` and `update_appcast_tip.py`",
+      "author": "PrinceSajjadHussain",
+      "author_prior_contribs": 4,
+      "comments": 0,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/7666",
+      "review_notes": "AI-generated duplicate error handling pattern"
+    },
+    {
+      "issue_number": 7665,
+      "title": "Issue : Missing Exception Handling in `update_appcast_tag.py` and `update_appcast_tip.py`",
+      "author": "PrinceSajjadHussain",
+      "author_prior_contribs": 4,
+      "comments": 0,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/7665",
+      "review_notes": "AI-generated exception handling suggestion; same spam pattern"
+    },
+    {
+      "issue_number": 7661,
+      "title": "Issue 1: Inconsistent variable naming in `update_appcast_tip.py`",
+      "author": "PrinceSajjadHussain",
+      "author_prior_contribs": 4,
+      "comments": 1,
+      "days_open": 0.02,
+      "url": "https://github.com/ghostty-org/ghostty/issues/7661",
+      "review_notes": "AI-generated nit about variable naming; explicitly called out as AI-hallucinated"
+    },
+    {
+      "issue_number": 7660,
+      "title": "Issue 1: Missing Error Handling for Environment Variables in `update_appcast_tag.py` and `update_appcast_tip.py`",
+      "author": "PrinceSajjadHussain",
+      "author_prior_contribs": 4,
+      "comments": 1,
+      "days_open": 0.0,
+      "url": "https://github.com/ghostty-org/ghostty/issues/7660",
+      "review_notes": "AI-generated env var error handling; spam pattern"
+    }
+  ]
+}

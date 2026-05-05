@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "repository": "tldraw/tldraw",
+    "description": "Final benchmark dataset: 5 issues per category, holistically reviewed",
+    "categories": {
+      "cat1_new_slop": "New contributor (\u22643 prior contribs at filing) + slop (AI-generated/spam/off-topic/low-quality)",
+      "cat2_new_not_planned": "New contributor + legitimate issue closed as not-planned",
+      "cat3_new_worked_upon": "New contributor + issue actually worked upon by maintainers",
+      "cat4_regular_slop": "Regular contributor (>3 prior contribs) + slop"
+    }
+  },
+  "cat1_new_slop": [
+    {
+      "issue_number": 8514,
+      "title": "Your MCP server ranks in the top 0.1% for reliability out of 20,000+ servers",
+      "author": "avib99",
+      "author_prior_contribs": 0,
+      "comments": 0,
+      "days_open": 0.07,
+      "url": "https://github.com/tldraw/tldraw/issues/8514",
+      "review_notes": "External promotional/spam message about MCP server ranking"
+    },
+    {
+      "issue_number": 8375,
+      "title": "Add a description to improve Dispatch discoverability",
+      "author": "VisionAIrySE",
+      "author_prior_contribs": 0,
+      "comments": 1,
+      "days_open": 6.57,
+      "url": "https://github.com/tldraw/tldraw/issues/8375",
+      "review_notes": "Promotional content for external tool Dispatch, closed as non-issue"
+    },
+    {
+      "issue_number": 8310,
+      "title": "Aplikasi Android Control & Sinkronisasi Jam Digital Shalat",
+      "author": "awanputih",
+      "author_prior_contribs": 3,
+      "comments": 0,
+      "days_open": 1.15,
+      "url": "https://github.com/tldraw/tldraw/issues/8310",
+      "review_notes": "Completely off-topic spam about Android prayer clock app in Indonesian"
+    },
+    {
+      "issue_number": 8309,
+      "title": "Firmware ESP8266 Jam Digital Shalat - Multi Mode & Jadwal Offline",
+      "author": "awanputih",
+      "author_prior_contribs": 3,
+      "comments": 0,
+      "days_open": 1.15,
+      "url": "https://github.com/tldraw/tldraw/issues/8309",
+      "review_notes": "Off-topic ESP8266 firmware prayer clock project unrelated to tldraw"
+    },
+    {
+      "issue_number": 8308,
+      "title": "Dokumentasi Lengkap & Panduan Deploy Jam Digital Shalat",
+      "author": "awanputih",
+      "author_prior_contribs": 3,
+      "comments": 1,
+      "days_open": 1.15,
+      "url": "https://github.com/tldraw/tldraw/issues/8308",
+      "review_notes": "Off-topic documentation for unrelated prayer clock project in Indonesian"
+    }
+  ],
+  "cat2_new_not_planned": [
+    {
+      "issue_number": 8366,
+      "title": "Security: timing attack in auth token comparison (CWE-208)",
+      "author": "spidershield-contrib",
+      "author_prior_contribs": 0,
+      "comments": 2,
+      "days_open": 0.45,
+      "url": "https://github.com/tldraw/tldraw/issues/8366",
+      "review_notes": "Security timing attack issue with legitimate fix provided but deemed low-risk"
+    },
+    {
+      "issue_number": 8339,
+      "title": "feat: warn when duplicate bindings are created",
+      "author": "Valley-15",
+      "author_prior_contribs": 1,
+      "comments": 1,
+      "days_open": 3.06,
+      "url": "https://github.com/tldraw/tldraw/issues/8339",
+      "review_notes": "Duplicate of existing issue #8324 on duplicate bindings warning"
+    },
+    {
+      "issue_number": 7375,
+      "title": "Zoom to selection option is not working",
+      "author": "Sam44323",
+      "author_prior_contribs": 0,
+      "comments": 8,
+      "days_open": 51.79,
+      "url": "https://github.com/tldraw/tldraw/issues/7375",
+      "review_notes": "Legitimate bug report on zoom to selection feature with developer investigation"
+    },
+    {
+      "issue_number": 6713,
+      "title": "SVG with border-radius breaks on Safari",
+      "author": "movsb",
+      "author_prior_contribs": 0,
+      "comments": 3,
+      "days_open": 0.47,
+      "url": "https://github.com/tldraw/tldraw/issues/6713",
+      "review_notes": "Real Safari/CSS issue requesting defensive CSS handling for SVG"
+    },
+    {
+      "issue_number": 6644,
+      "title": "Add Hoppscotch embed support",
+      "author": "xamey",
+      "author_prior_contribs": 3,
+      "comments": 3,
+      "days_open": 215.13,
+      "url": "https://github.com/tldraw/tldraw/issues/6644",
+      "review_notes": "Legitimate feature request for Hoppscotch embed with working demo and branch"
+    }
+  ],
+  "cat3_new_worked_upon": [
+    {
+      "issue_number": 8544,
+      "title": "Copy as PNG + paste shapes with cmd+V fails in Chrome 147",
+      "author": "simon-ardal-adsk",
+      "author_prior_contribs": 0,
+      "comments": 2,
+      "days_open": 8.86,
+      "url": "https://github.com/tldraw/tldraw/issues/8544",
+      "review_notes": "Chrome 147 clipboard issue, maintainer investigated and filed upstream Chromium bug"
+    },
+    {
+      "issue_number": 8456,
+      "title": "ShapeUtil.isAspectRatioLocked() signature missing shape parameter in implementations",
+      "author": "jubalm",
+      "author_prior_contribs": 0,
+      "comments": 0,
+      "days_open": 8.81,
+      "url": "https://github.com/tldraw/tldraw/issues/8456",
+      "review_notes": "ShapeUtil.isAspectRatioLocked() signature mismatch, assigned and addressed"
+    },
+    {
+      "issue_number": 8430,
+      "title": "fix(editor): remove window.__tldraw__hardReset global \u2014 causes memory retention",
+      "author": "stewartmcgown",
+      "author_prior_contribs": 0,
+      "comments": 0,
+      "days_open": 0.44,
+      "url": "https://github.com/tldraw/tldraw/issues/8430",
+      "review_notes": "Memory leak in hardReset global, patch provided and merged"
+    },
+    {
+      "issue_number": 8428,
+      "title": "Exported PNG shows blank content on tldraw.com",
+      "author": "sudwhiwdh",
+      "author_prior_contribs": 0,
+      "comments": 4,
+      "days_open": 2.62,
+      "url": "https://github.com/tldraw/tldraw/issues/8428",
+      "review_notes": "PNG export bug, maintainer acknowledged and fixed"
+    },
+    {
+      "issue_number": 8426,
+      "title": "Canvas fails to load after update on tldraw.com",
+      "author": "earavichandran",
+      "author_prior_contribs": 1,
+      "comments": 2,
+      "days_open": 2.89,
+      "url": "https://github.com/tldraw/tldraw/issues/8426",
+      "review_notes": "Canvas loading bug, duplicate of #8428, fixed by maintainer"
+    }
+  ],
+  "cat4_regular_slop": [
+    {
+      "issue_number": 6312,
+      "title": "VS Code extension cannot be installed in Cursor",
+      "author": "seflless",
+      "author_prior_contribs": 19,
+      "comments": 5,
+      "days_open": 190.52,
+      "url": "https://github.com/tldraw/tldraw/issues/6312",
+      "review_notes": "Vague browser extension issue with minimal detail, marked stale"
+    },
+    {
+      "issue_number": 6095,
+      "title": "Border misaligned when selected in Edge browser",
+      "author": "yi-boide",
+      "author_prior_contribs": 13,
+      "comments": 5,
+      "days_open": 194.92,
+      "url": "https://github.com/tldraw/tldraw/issues/6095",
+      "review_notes": "Minimal bug report with no repro steps or browser info, marked stale"
+    },
+    {
+      "issue_number": 6078,
+      "title": "sync error: INVALID_RECORD",
+      "author": "yi-boide",
+      "author_prior_contribs": 12,
+      "comments": 3,
+      "days_open": 198.65,
+      "url": "https://github.com/tldraw/tldraw/issues/6078",
+      "review_notes": "Missing-info bug report with only stack trace and no repro, marked stale"
+    },
+    {
+      "issue_number": 6063,
+      "title": "WebSocket connection repeatedly reconnects",
+      "author": "yi-boide",
+      "author_prior_contribs": 10,
+      "comments": 3,
+      "days_open": 201.69,
+      "url": "https://github.com/tldraw/tldraw/issues/6063",
+      "review_notes": "Vague WebSocket issue with no repro steps, marked stale"
+    },
+    {
+      "issue_number": 5963,
+      "title": "Arrow shape cannot be placed at bottom",
+      "author": "yi-boide",
+      "author_prior_contribs": 9,
+      "comments": 5,
+      "days_open": 187.56,
+      "url": "https://github.com/tldraw/tldraw/issues/5963",
+      "review_notes": "Low-quality bug report about arrow z-ordering with minimal detail"
+    }
+  ]
+}
